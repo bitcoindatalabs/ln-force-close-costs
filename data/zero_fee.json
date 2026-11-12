@@ -1,0 +1,149 @@
+{
+ "census": {
+  "closes": 31,
+  "public": 13,
+  "unlisted": 18,
+  "first": "2025-10-29",
+  "first_public": "2026-09-28",
+  "last": "2026-10-26",
+  "by_month": [
+   {
+    "m": "2025-10",
+    "listed": false,
+    "k": 1
+   },
+   {
+    "m": "2025-11",
+    "listed": false,
+    "k": 5
+   },
+   {
+    "m": "2026-08",
+    "listed": false,
+    "k": 2
+   },
+   {
+    "m": "2026-09",
+    "listed": false,
+    "k": 8
+   },
+   {
+    "m": "2026-09",
+    "listed": true,
+    "k": 2
+   },
+   {
+    "m": "2026-10",
+    "listed": false,
+    "k": 2
+   },
+   {
+    "m": "2026-10",
+    "listed": true,
+    "k": 11
+   }
+  ],
+  "commitment_fee_zero": true,
+  "child_same_block": 1.0,
+  "med_child_fee": 544.0,
+  "med_child_vb": 153.0,
+  "med_pkg_fr": 1.5813953488372092,
+  "public_nodes": 10,
+  "top_node_share_of_public": 1.0,
+  "med_capacity_sat": 49155.0
+ },
+ "counterfactual": {
+  "by_year": [
+   {
+    "y": 2021,
+    "closes": 3839,
+    "anchors": 6674.0,
+    "owner": 6256.0,
+    "anyone": 418.0,
+    "bumped": 324.0,
+    "commitment_vb": 1019863.0,
+    "anchor_vb": 744969.5,
+    "p2a_vb": 598430.75,
+    "anchor_value_btc": 0.0220242
+   },
+   {
+    "y": 2022,
+    "closes": 34297,
+    "anchors": 62826.0,
+    "owner": 51055.0,
+    "anyone": 11771.0,
+    "bumped": 4168.0,
+    "commitment_vb": 9572402.0,
+    "anchor_vb": 6871753.5,
+    "p2a_vb": 5204931.25,
+    "anchor_value_btc": 0.2073258
+   },
+   {
+    "y": 2023,
+    "closes": 39280,
+    "anchors": 70131.0,
+    "owner": 24689.0,
+    "anyone": 45442.0,
+    "bumped": 14391.0,
+    "commitment_vb": 11015151.0,
+    "anchor_vb": 7089314.25,
+    "p2a_vb": 4893619.0,
+    "anchor_value_btc": 0.2314323
+   },
+   {
+    "y": 2024,
+    "closes": 41035,
+    "anchors": 68631.0,
+    "owner": 10515.0,
+    "anyone": 58116.0,
+    "bumped": 5175.0,
+    "commitment_vb": 10704735.0,
+    "anchor_vb": 6692057.25,
+    "p2a_vb": 6206608.75,
+    "anchor_value_btc": 0.2264823
+   },
+   {
+    "y": 2025,
+    "closes": 59927,
+    "anchors": 102663.0,
+    "owner": 12192.0,
+    "anyone": 90471.0,
+    "bumped": 1740.0,
+    "commitment_vb": 15525042.0,
+    "anchor_vb": 9946775.25,
+    "p2a_vb": 9709796.75,
+    "anchor_value_btc": 0.3387879
+   },
+   {
+    "y": 2026,
+    "closes": 45209,
+    "anchors": 76577.0,
+    "owner": 3695.0,
+    "anyone": 72882.0,
+    "bumped": 1852.0,
+    "commitment_vb": 11566020.0,
+    "anchor_vb": 7322180.75,
+    "p2a_vb": 7265215.25,
+    "anchor_value_btc": 0.2527041
+   }
+  ],
+  "totals": {
+   "closes": 223587,
+   "anchors": 387502,
+   "anchor_vb": 38667050.5,
+   "p2a_vb": 33878601.75,
+   "anchor_vb_per_close": 172.93961858247573,
+   "p2a_vb_per_close": 151.5231285808209,
+   "share_bumped": 0.1236655082808929,
+   "anchor_value_btc": 1.2787566
+  },
+  "sizes_vb": {
+   "p2wsh_anchor_out": 43.0,
+   "owner_anchor_in": 69.75,
+   "anyone_anchor_in": 51.75,
+   "p2a_out": 13.0,
+   "p2a_in": 41.25,
+   "child_extra": 111.0
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "source": "src/04d_breach_wave.py: snapshot work tables + chain lake",
+ "cutoff_height": 974041,
+ "first": "2026-09-28 01:03:36+00:00",
+ "last": "2026-10-05 03:58:25+00:00",
+ "penalised_commitments": 306,
+ "btc_all": 3.21195534,
+ "channels": 305,
+ "btc_without_outlier": 3.18196478,
+ "splices": {
+  "n": 305,
+  "same_funding_keys_before_and_after": 305,
+  "shared_input_sequence_0": 305,
+  "blocks_open_to_splice": {
+   "p10": 3.0,
+   "p50": 5.0,
+   "p90": 13.0,
+   "min": 3.0,
+   "max": 228.0,
+   "n": 305
+  },
+  "blocks_splice_to_revoked_close": {
+   "p10": 3.0,
+   "p50": 3.0,
+   "p90": 4.0,
+   "min": 3.0,
+   "max": 29.0,
+   "n": 305
+  },
+  "splice_to_close_le_4_blocks": 298,
+  "open_and_splice_same_wallet": 303,
+  "funder_is_penalizer_to_remote_sweep": 39,
+  "funder_is_penalizer_change_with_penalty": 264,
+  "funder_is_penalizer_any": 298,
+  "penalty_blocks_after_close": {
+   "p10": 26.0,
+   "p50": 93.0,
+   "p90": 111.0,
+   "min": 1.0,
+   "max": 120.0,
+   "n": 305
+  },
+  "capacity_sat": {
+   "p10": 1229784.8,
+   "p50": 1263186.0,
+   "p90": 1663149.6,
+   "min": 335000.0,
+   "max": 3872712.0,
+   "n": 305
+  }
+ },
+ "other_penalised": {
+  "n": 1,
+  "splice": false,
+  "channel_age_days": [
+   276.2013888888889
+  ],
+  "btc": 0.02999056
+ },
+ "look_alikes": {
+  "definition": "unlisted anchor force closes since 2026-09-01 with the wave's commitment shape (278 vB, fee 1,410-1,411 sat), not penalised",
+  "n": 591,
+  "splices": 93,
+  "splices_in_wave_week": 90,
+  "splice_blocks_splice_to_close": {
+   "p10": 3.0,
+   "p50": 3.0,
+   "p90": 4.0,
+   "min": 1.0,
+   "max": 8.0,
+   "n": 93
+  },
+  "splice_to_local_swept_after_blocks": {
+   "p10": 144.0,
+   "p50": 144.0,
+   "p90": 164.8,
+   "min": 144.0,
+   "max": 300.0,
+   "n": 92
+  },
+  "funder_on_counterparty_side_to_remote_sweep": 38,
+  "funder_on_broadcaster_side_to_local_sweep": 0
+ },
+ "share_of_pattern_closes_revoked_in_wave_week": 0.7721518987341772
+}

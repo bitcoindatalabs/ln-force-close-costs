@@ -1,0 +1,64 @@
+{
+ "source": "src/02b_pre_anchor_2026.py: snapshot work tables (force_closes), client_history, and a copy of the Lightning lake's node_client_history feature bits",
+ "cutoff_height": 974041,
+ "year": 2026,
+ "public_force_closes": 15440,
+ "pre_anchor": 3954,
+ "pre_anchor_share": 0.2560880829015544,
+ "pre_anchor_nodes": 910,
+ "top_n": 5,
+ "top_nodes_share_of_pre_anchor": 0.7422862923621649,
+ "top_nodes_pre_anchor_median_age_days": 4.138888888888889,
+ "top_nodes": [
+  {
+   "closes": 1164,
+   "client": "LND",
+   "anchor_feature_status": {
+    "anchor": 1164
+   },
+   "median_age_days": 2.9305555555555554
+  },
+  {
+   "closes": 831,
+   "client": "LDK",
+   "anchor_feature_status": {
+    "no_anchor": 831
+   },
+   "median_age_days": 4.041666666666667
+  },
+  {
+   "closes": 722,
+   "client": "LDK",
+   "anchor_feature_status": {
+    "no_anchor": 722
+   },
+   "median_age_days": 4.09375
+  },
+  {
+   "closes": 692,
+   "client": "LDK",
+   "anchor_feature_status": {
+    "no_anchor": 692
+   },
+   "median_age_days": 4.184027777777778
+  },
+  {
+   "closes": 690,
+   "client": "LDK",
+   "anchor_feature_status": {
+    "no_anchor": 690
+   },
+   "median_age_days": 4.291666666666667
+  }
+ ],
+ "top_nodes_ldk_without_anchor_bits": 4,
+ "without_top_nodes": {
+  "public_force_closes": 12494,
+  "pre_anchor": 1019,
+  "pre_anchor_share": 0.08155914839122778,
+  "pre_anchor_median_age_days": 1435.0347222222222,
+  "pre_anchor_median_age_years": 3.9289109437980074
+ },
+ "pre_anchor_one_endpoint_without_anchor_bits_share": 0.864693980778958,
+ "anchor_baseline_top_nodes_share": 0.14451320491588948
+}

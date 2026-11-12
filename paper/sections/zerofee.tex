@@ -1,0 +1,20 @@
+\section{Zero-Fee Commitments}
+\label{sec:zerofee}
+
+{\setlength{\tabcolsep}{3pt}\input{tables/table_zero_fee}}
+
+\paragraph{The first closes came before the specification}
+The first zero-fee commitment we find closed a private channel on \ZfFirst, and \ZfBeforeMerge{} had closed before the
+specification merged the format in May~2026. The first public one closed on \ZfFirstPublic. By the cutoff there were
+\ZfCloses{}: \ZfUnlisted{} private and \ZfPublic{} public, involving \ZfPublicNodes{} distinct nodes, one of them party to
+every public close. Every commitment paid no fee, and every pay-to-anchor output was spent by a child in the same
+block, at a median package fee rate of \ZfPkgFr~sat/vB. The channels were small (median capacity \ZfMedCap~sat).
+
+\paragraph{The new format saves little block space}
+Across the \CfCloses{} anchor force closes we observe, the anchor mechanism took \CfAnchorVb~vB per close: two anchor
+outputs and the transactions that spent them. Zero-fee commitments would have taken \CfPtwoaVb~vB: one pay-to-anchor
+output, its spend, and a child for the \CfNotBumpedPct\% of closes that were not already bumped
+(Table~\ref{tab:zero_fee}). That is \CfSavingPct\% less. The gains lie
+elsewhere: the \CfAnchorBtc~BTC held in 330-sat anchor outputs would not exist, commitment fees no longer have to be
+guessed at signing, and package relay replaces the carve-out that Bitcoin Core has
+removed~\cite{core28,core31}.

@@ -1,0 +1,67 @@
+\section{Background and Related Work}
+\label{sec:background}
+
+\subsection{Force closes}
+A channel is a 2-of-2 multisignature output on the chain. Each party holds its own version of the latest commitment
+transaction, which spends that output to the two balances and to one output per pending payment (HTLC). In the
+holder's version, the holder's own balance (\texttt{to\_local}) is locked for \texttt{to\_self\_delay} blocks, a value
+the peer chose at opening, while the peer's balance (\texttt{to\_remote}) is not~\cite{bolt3}. The delay gives the peer
+time to react if the holder broadcasts an old, revoked commitment: the peer can then take every output with a penalty
+(justice) transaction~\cite{poon2016bitcoin}. A force close is the broadcast of a commitment; the broadcaster waits out
+the delay before sweeping its balance.
+
+Pending payments add deadlines. An offered HTLC returns to the sender after its expiry height
+(\texttt{cltv\_expiry}) through a pre-signed HTLC-timeout transaction, or, on the peer's commitment, directly; a
+received HTLC is claimed with the payment's preimage through an HTLC-success transaction~\cite{bolt3,bolt5}. A node
+that forwards a payment holds two HTLCs for it, and the incoming one expires a margin later than the outgoing one,
+the \texttt{cltv\_expiry\_delta} the node advertises in its channel updates~\cite{bolt7}. If the node cannot time out
+its outgoing HTLC on-chain within that margin, the downstream node can claim it with the preimage while the
+upstream one times out the incoming HTLC, and the forwarder pays for a payment it is not paid for. Flood-and-loot,
+time-dilation and replacement-cycling attacks all work by making such a transaction confirm too
+late~\cite{harris2020flood,riard2020timedilation,riard2023replacement}.
+
+\subsection{Who pays the fee}
+Commitment transactions are signed when the channel state changes and broadcast later, at a fee rate nobody knew at
+signing. Three formats answer this differently.
+
+\emph{Pre-anchor commitments} carry a fee fixed at signing. The channel's opener proposes it with
+\texttt{update\_fee}, and a peer that finds the rate unreasonable can fail the channel~\cite{bolt2}. The broadcaster
+cannot raise the fee later, because its own output is time-locked. These disagreements are a commonly cited cause of
+force closes when fees move fast.
+
+\emph{Anchor commitments} (specified in 2020~\cite{bolts688anchors}) add two 330-sat anchor outputs, one per party,
+which their owner can spend at once with a child transaction that pays for both (child pays for parent, CPFP). Sixteen
+blocks after the commitment confirms, anyone can spend either anchor, so that unused anchors do not stay in the UTXO
+set~\cite{bolt3}. The peer's \texttt{to\_remote} output carries a one-block delay, so that the anchors are the only
+outputs a child can spend at once, and the CPFP carve-out, a Bitcoin Core mempool rule, let each party attach one
+child even if the other had filled the package limits~\cite{core31}. Second-stage HTLC transactions are signed so that
+the holder can add inputs to pay their fee~\cite{bolt3}. Simple taproot channels follow the same design with taproot
+outputs and anchor scripts of their own~\cite{bolts995taproot}.
+
+\emph{Zero-fee commitments}~\cite{bolts1228zerofee} pay no fee at all. The commitment is a version-3 (TRUC)
+transaction~\cite{bip431} with one keyless pay-to-anchor (P2A) output in place of the two anchors, and it is relayed
+together with a child that pays for both, which Bitcoin Core supports since version 28.0~\cite{core28}. TRUC's topology limits replace
+the carve-out as the defence against transaction pinning~\cite{optechpinning}, and Bitcoin Core 31.0 removed the
+carve-out~\cite{core31}. The specification merged the format in May~2026; channels move to it as operators upgrade
+their software, which in the Lightning Network takes months to years~\cite{kumar2026upgradedynamics}.
+
+\subsection{Related work}
+BitMEX Research first counted non-cooperative closes from the chain, private channels included, and found more than
+60,000 by January~2020~\cite{bitmex2020closures}. Zabka et al.\ classified how public channels close
+\cite{zabka2022empirical}; Grötschla et al.\ followed public channels from funding to the spending of their closing
+outputs~\cite{grotschla2025lifecycle}; Antonelli et al.\ predict which channels will close and
+how~\cite{antonelli2026closures}. Kappos et al.\ and Romiti et al.\ used closing transactions to link channels to
+on-chain wallets~\cite{kappos2021empirical,romiti2021crosslayer}. Our previous paper measured force closes around
+the 2026 Core Lightning shutdown~\cite{kumar2026clientdiversity}. None of these accounts for what a force close costs
+or follows the anchor outputs.
+
+The fee-bumping design has been argued from small samples. Daftuar analysed the 2023 transactions that spent
+anchor-like outputs, to test whether Lightning's commitment spends would fit version-3 relay
+rules~\cite{daftuar2024v3}. An open LND issue proposes to stop sweeping ``dangling'' anchors, on the argument that
+third parties sweep them more efficiently, and gives the break-even fee rate without
+data~\cite{lnd8997}. The security literature models what happens when closing transactions confirm late: mass closes
+that congest the chain~\cite{harris2020flood,sguanci2023massexit}, nodes kept from seeing new
+blocks~\cite{riard2020timedilation}, pinned or cycled
+replacements~\cite{optechpinning,riard2023replacement}, HTLC slots jammed by attackers~\cite{mizrahi2021congestion}
+and fees taken from revoked commitments~\cite{harding2024irrevocable}. We measure how often, and in what fee
+conditions, such deadlines are missed in practice.

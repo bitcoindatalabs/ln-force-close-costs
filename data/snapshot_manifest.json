@@ -1,0 +1,56 @@
+{
+ "cutoff_utc": "2026-11-01T00:00:00Z",
+ "cutoff_height": 974041,
+ "scan_start_height": 503816,
+ "scan_start_utc": "2018-01-12 04:49:23+00",
+ "scan_end_height": 974575,
+ "first_close_utc": "2018-04-12 15:25:19+00",
+ "last_close_utc": "2026-10-31 23:35:28+00",
+ "counts": {
+  "closes": 699049,
+  "spends": 692756,
+  "ul_spends": 523439,
+  "ul_closes": 274532,
+  "funding_outpoints": 736110,
+  "client_history": 82962,
+  "force_closes": 523815,
+  "force_close_outputs": 1346588,
+  "force_close_outputs_spent": 1212596
+ },
+ "checks": {
+  "closes_merged_equals_parts": true,
+  "spends_merged_equals_parts": true,
+  "ul_spends_merged_equals_parts": true,
+  "ul_closes_merged_readable": true,
+  "ul_closes_merged_equals_parts": true,
+  "listed_spends_without_close": 0,
+  "first_close_height_ge_scan_start": true,
+  "scan_end_after_cutoff": true,
+  "spend_censor_rule_inside_scan": true
+ },
+ "source": "/data/Lightning/Data/parquet/onchain/v3",
+ "sources": {
+  "close_tables": {
+   "dir": "/data/Lightning/Data/parquet/onchain/v3",
+   "scanner_last_height": 974575,
+   "mtime": {
+    "ln_close_txs.parquet": "2026-11-06 13:26:04 CST",
+    "ln_commitment_spends.parquet": "2026-11-06 13:26:10 CST",
+    "ln_unlisted_commitment_spends.parquet": "2026-11-06 13:26:23 CST",
+    "ln_unlisted_force_closes.parquet": "2026-11-06 13:26:17 CST"
+   }
+  },
+  "funding_outpoints": {
+   "path": "/data/Lightning/Data/parquet/onchain/ln_funding_outpoints.parquet",
+   "rows": 736110,
+   "sha256": "a20f9c1dcc17c6f6db28d7cbd7cb0c77eba96770a5bf80a034e47fa05989184f",
+   "mtime": "2026-11-04 22:11:58 CST"
+  },
+  "client_history": {
+   "path": "/data/Lightning/Data/parquet/node_client_history.parquet",
+   "mtime": "2026-11-09 21:05:07 CST"
+  },
+  "snapshot_taken": "2026-11-10 15:08:01 CST"
+ },
+ "censoring": "spends are kept up to the cutoff height; statistics about a close's outputs use closes at least 4032 blocks before it; the scan itself runs to 974,575"
+}

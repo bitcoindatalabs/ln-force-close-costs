@@ -1,0 +1,16 @@
+\section{Force Share by Client Pair}
+\label{app:pairs}
+
+\input{tables/table_client_pairs}
+
+Table~\ref{tab:client_pairs} gives the force share of public closes since 8~May~2023 by the implementations at the
+two ends of the channel, from the labels of our first paper~\cite{kumar2026clientdiversity}. The chain does not show
+which side broadcast a force close, so a close is attributed to the pair, not to one implementation. Among pairs with
+both ends labelled and more than 1,000 closes, the force share ranges from \PairForcePctLndLnd\% (LND--LND,
+\PairClosesLndLnd{} closes) to \PairForcePctClnCln\% (CLN--CLN); CLN--LND (\PairForcePctClnLnd\%), LDK--LND
+(\PairForcePctLdkLnd\%) and Eclair--LND (\PairForcePctEclairLnd\%) lie between. Pairs with an unlabelled end run higher,
+for example \PairForcePctLndUnknown\% for LND with an unlabelled peer. The one outlier, LDK--LDK at
+\PairForcePctLdkLdkExact\% of \PairClosesLdkLdk{} closes, is one node closing channels cooperatively at scale, not a
+property of the implementation: a single node is party to \PairLdkLdkTopNodePct\% of those closes. For the other
+pairs we have not separated operators from implementations, so the table describes pairs and does not rank
+implementations.

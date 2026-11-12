@@ -1,0 +1,700 @@
+{
+ "lake_end_height": 974394,
+ "measured_to_height": 974041,
+ "snapshot_cutoff_height": 974041,
+ "closes_in_list": 14114,
+ "closes_found_in_lake": 14114,
+ "anchors": 23864,
+ "anchors_role_mismatch": 0,
+ "outputs_without_role": 0,
+ "revealed_keys": 16974,
+ "tweaks_computed": 16817,
+ "anchors_with_two_distinct_matching_keys": 0,
+ "anchor_spend_paths": {
+  "unspent": 22158,
+  "key_path": 1706
+ },
+ "anchors_spent_in_lake_not_in_snapshot": 0,
+ "anchors_spent_in_snapshot_not_in_lake": 0,
+ "script_path_spends": 0,
+ "script_path_order": {},
+ "violations": 0,
+ "chainwide_op16_csv_script_spends": {
+  "inputs": 0,
+  "files": 2,
+  "heights_scanned": "709000..974041"
+ },
+ "key_path": {
+  "spends": 1706,
+  "witness_items_1": 1706,
+  "schnorr_64_or_65": 1706,
+  "same_block_as_close": 77,
+  "within_16_blocks": 753,
+  "blocks_to_spend_median": 30.0,
+  "after_key_revealed": 200,
+  "by_close_year": {
+   "2023": 26,
+   "2024": 299,
+   "2025": 1310,
+   "2026": 71
+  },
+  "same_block_by_close_year": {
+   "2023": 8,
+   "2024": 17,
+   "2025": 23,
+   "2026": 29
+  }
+ },
+ "by_year_key_path": {
+  "2023|revealed": {
+   "key_path": 26,
+   "unspent": 6
+  },
+  "2024|not revealed": {
+   "key_path": 3,
+   "unspent": 30
+  },
+  "2024|revealed": {
+   "key_path": 296,
+   "unspent": 166
+  },
+  "2025|not revealed": {
+   "key_path": 25,
+   "unspent": 718
+  },
+  "2025|revealed": {
+   "key_path": 1285,
+   "unspent": 1132
+  },
+  "2026|not revealed": {
+   "key_path": 13,
+   "unspent": 6582
+  },
+  "2026|revealed": {
+   "key_path": 58,
+   "unspent": 13524
+  }
+ },
+ "by_year_key_path_censored": {
+  "2023|revealed": {
+   "key_path": 26,
+   "unspent": 6
+  },
+  "2024|not revealed": {
+   "key_path": 3,
+   "unspent": 30
+  },
+  "2024|revealed": {
+   "key_path": 296,
+   "unspent": 166
+  },
+  "2025|not revealed": {
+   "key_path": 25,
+   "unspent": 718
+  },
+  "2025|revealed": {
+   "key_path": 1285,
+   "unspent": 1132
+  },
+  "2026|not revealed": {
+   "key_path": 13,
+   "unspent": 4337
+  },
+  "2026|revealed": {
+   "key_path": 55,
+   "unspent": 12437
+  }
+ },
+ "exposed_anchors": {
+  "anchors_unspent_when_key_revealed": 15028,
+  "later_swept_by_script_path": 0,
+  "later_spent_by_owner_key_path": 200,
+  "still_unspent_at_lake_end": 14828,
+  "still_unspent_at_cutoff": 14828,
+  "exposed_ge_16_blocks": 15018,
+  "exposed_ge_1008_blocks": 14779,
+  "exposed_ge_4032_blocks": 10704,
+  "exposed_blocks_median": 14581.0,
+  "anchor_block_exposure_total": 272745730,
+  "reveal_leaf": {
+   "to_local_delay": 11814,
+   "to_remote": 3203,
+   "to_local_revoke": 6,
+   "second_level_delay": 5
+  },
+  "by_reveal_year": {
+   "2023": 20,
+   "2024": 284,
+   "2025": 831,
+   "2026": 13893
+  }
+ },
+ "revealed_anchors": {
+  "anchors": 16493,
+  "first_reveal_leaf": {
+   "to_local_delay": 12638,
+   "to_remote": 3841,
+   "second_level_delay": 8,
+   "to_local_revoke": 6
+  },
+  "blocks_close_to_reveal_median": 2018.0
+ },
+ "not_revealed": {
+  "anchors": 7371,
+  "unspent": 7330,
+  "key_path": 41,
+  "commitment_has_unspent_non_anchor_p2tr": 7343,
+  "commitment_has_no_unspent_non_anchor_p2tr": 28
+ },
+ "script_path_sweep_input": {
+  "weight": 202,
+  "vbytes": 50.5,
+  "breakeven_sat_vb": 6.534653465346534
+ },
+ "economics": {
+  "blockstats": "data/work/blockstats.parquet (stage 00, chain lake getblockstats), to the cutoff",
+  "minfeerate_note": "getblockstats minfeerate is an integer in sat/vB, truncated: 0 means the cheapest transaction paid below 1 sat/vB. Coinbase-only blocks excluded.",
+  "1_sweep_prize": {
+   "script_path_input": {
+    "weight_wu": 202,
+    "vbytes": 50.5,
+    "breakeven_sat_vb": 6.534653465346534
+   },
+   "key_path_input": {
+    "weight_wu": 230,
+    "vbytes": 57.5,
+    "breakeven_sat_vb": 5.739130434782608
+   },
+   "tx_overhead_vb_per_batch": 53.5,
+   "all_unspent": {
+    "anchors": 22158,
+    "gross_sat": 7312140,
+    "gross_btc": 0.0731214,
+    "net_btc_at_0.1_sat_vb": 0.07200242,
+    "net_btc_at_1_sat_vb": 0.06193161,
+    "net_btc_at_2_sat_vb": 0.05074182,
+    "net_btc_at_5_sat_vb": 0.01717245
+   },
+   "key_public_unspent": {
+    "anchors": 14828,
+    "gross_sat": 4893240,
+    "gross_btc": 0.0489324,
+    "net_btc_at_0.1_sat_vb": 0.04818359,
+    "net_btc_at_1_sat_vb": 0.04144426,
+    "net_btc_at_2_sat_vb": 0.03395612,
+    "net_btc_at_5_sat_vb": 0.0114917,
+    "post_reveal_min_block_feerate": {
+     "rule": "first eligible block = max(close_height + 16, reveal height), up to the cutoff; minfeerate is truncated, so the net at minfeerate is an upper bound and at minfeerate + 1 a lower bound",
+     "feerate_sat_vb_distribution": {
+      "0.0": 14828
+     },
+     "net_btc_upper": 0.0489324,
+     "net_btc_lower": 0.04144426,
+     "first_eligible_block_share_minfeerate_zero": 0.9431
+    }
+   },
+   "largest_p2wsh_sweeper": {
+    "net_btc": 0.06967455,
+    "key_public_gross_over_largest_net": 0.702,
+    "all_unspent_gross_over_largest_net": 1.049
+   }
+  },
+  "2_utxo_footprint": {
+   "unspent_anchors": 22158,
+   "unspent_btc": 0.0731214,
+   "ctxout_bytes_each": 43,
+   "coin_entry_bytes_each": [
+    74
+   ],
+   "coin_entry_bytes_total": 1639692,
+   "coin_entry_note": "LevelDB key 'C'+txid+VARINT(vout), value VARINT(height*2)+VARINT(CompressAmount(330))+VARINT(34+6)+34-byte script; chainstate LevelDB uses kNoCompression; excludes LevelDB per-record overhead",
+   "dust_threshold_p2tr_at_3_sat_vb": 330,
+   "force_close_outputs_unspent_at_cutoff": {
+    "rule": "outputs of all force closes in the window (listed + unlisted), unspent at the cutoff, OP_RETURN outputs excluded (work/outputs.parquet)",
+    "total_unspent": 133990,
+    "total_unspent_btc": 416.11616666,
+    "taproot_anchor_unspent": 22158,
+    "taproot_anchor_share_count": 0.16537055004104784,
+    "taproot_anchor_share_value": 0.00017572352592526403,
+    "p2wsh_anchor_unspent": 6
+   },
+   "utxo_set_share": {
+    "checkpoint_height": 972800,
+    "utxo_set_txouts": 164544642,
+    "taproot_anchors_unspent_at_checkpoint": 20336,
+    "share_of_txouts": 0.00012358956057651515,
+    "share_of_bogosize": 0.0001325579674136708
+   }
+  },
+  "3_owner_key_path": {
+   "halves": "block time, UTC; 2026H2 ends at the cutoff",
+   "key_path_spends_by_spend_half": [
+    {
+     "spend_half": "2023H2",
+     "anchor_only_tx": 6,
+     "same_block_as_close": 8,
+     "with_own_commitment_output": 0,
+     "total": 14,
+     "months": 5.28,
+     "per_month": 2.7
+    },
+    {
+     "spend_half": "2024H1",
+     "anchor_only_tx": 23,
+     "same_block_as_close": 7,
+     "with_own_commitment_output": 7,
+     "total": 37,
+     "months": 5.98,
+     "per_month": 6.2
+    },
+    {
+     "spend_half": "2024H2",
+     "anchor_only_tx": 44,
+     "same_block_as_close": 10,
+     "with_own_commitment_output": 129,
+     "total": 183,
+     "months": 6.04,
+     "per_month": 30.3
+    },
+    {
+     "spend_half": "2025H1",
+     "anchor_only_tx": 495,
+     "same_block_as_close": 5,
+     "with_own_commitment_output": 275,
+     "total": 775,
+     "months": 5.95,
+     "per_month": 130.3
+    },
+    {
+     "spend_half": "2025H2",
+     "anchor_only_tx": 389,
+     "same_block_as_close": 18,
+     "with_own_commitment_output": 205,
+     "total": 612,
+     "months": 6.04,
+     "per_month": 101.3
+    },
+    {
+     "spend_half": "2026H1",
+     "anchor_only_tx": 6,
+     "same_block_as_close": 21,
+     "with_own_commitment_output": 46,
+     "total": 73,
+     "months": 5.95,
+     "per_month": 12.3
+    },
+    {
+     "spend_half": "2026H2",
+     "anchor_only_tx": 0,
+     "same_block_as_close": 8,
+     "with_own_commitment_output": 4,
+     "total": 12,
+     "months": 4.04,
+     "per_month": 3.0
+    }
+   ],
+   "key_path_spend_txs": {
+    "median_anchors_in_tx_by_spend_half": {
+     "2023H2": 1.0,
+     "2024H1": 1.0,
+     "2024H2": 1.0,
+     "2025H1": 2.0,
+     "2025H2": 3.0,
+     "2026H1": 1.0,
+     "2026H2": 1.0
+    },
+    "median_tx_feerate_by_spend_half": {
+     "2023H2": 12.76,
+     "2024H1": 1.01,
+     "2024H2": 3.14,
+     "2025H1": 1.02,
+     "2025H2": 1.02,
+     "2026H1": 1.01,
+     "2026H2": 2.17
+    }
+   },
+   "close_cohorts_owner_spent_within_4032_blocks": [
+    {
+     "close_half": "2023H2",
+     "anchors": 32,
+     "owner_spent_4032": 14,
+     "share": 0.4375
+    },
+    {
+     "close_half": "2024H1",
+     "anchors": 180,
+     "owner_spent_4032": 31,
+     "share": 0.1722
+    },
+    {
+     "close_half": "2024H2",
+     "anchors": 315,
+     "owner_spent_4032": 162,
+     "share": 0.5143
+    },
+    {
+     "close_half": "2025H1",
+     "anchors": 1022,
+     "owner_spent_4032": 636,
+     "share": 0.6223
+    },
+    {
+     "close_half": "2025H2",
+     "anchors": 2138,
+     "owner_spent_4032": 544,
+     "share": 0.2544
+    },
+    {
+     "close_half": "2026H1",
+     "anchors": 7030,
+     "owner_spent_4032": 56,
+     "share": 0.008
+    },
+    {
+     "close_half": "2026H2",
+     "anchors": 9812,
+     "owner_spent_4032": 5,
+     "share": 0.0005
+    }
+   ],
+   "owner_sweeps_of_matching_output_by_half": [
+    {
+     "rev_half": "2023H2",
+     "owner_sweeps": 20,
+     "anchor_in_same_tx": 0,
+     "anchor_spent_later": 15,
+     "median_sweep_feerate": 23.7869,
+     "share_sweep_below_breakeven": 0.05,
+     "median_block_p50": 18.5,
+     "share_from_batch_blocks": 0.0,
+     "share_in_same_tx": 0.0
+    },
+    {
+     "rev_half": "2024H1",
+     "owner_sweeps": 153,
+     "anchor_in_same_tx": 7,
+     "anchor_spent_later": 80,
+     "median_sweep_feerate": 21.5116,
+     "share_sweep_below_breakeven": 0.0,
+     "median_block_p50": 17.0,
+     "share_from_batch_blocks": 0.0,
+     "share_in_same_tx": 0.0458
+    },
+    {
+     "rev_half": "2024H2",
+     "owner_sweeps": 266,
+     "anchor_in_same_tx": 128,
+     "anchor_spent_later": 39,
+     "median_sweep_feerate": 4.1087,
+     "share_sweep_below_breakeven": 0.7331,
+     "median_block_p50": 4.0,
+     "share_from_batch_blocks": 0.0,
+     "share_in_same_tx": 0.4812
+    },
+    {
+     "rev_half": "2025H1",
+     "owner_sweeps": 419,
+     "anchor_in_same_tx": 274,
+     "anchor_spent_later": 66,
+     "median_sweep_feerate": 2.0,
+     "share_sweep_below_breakeven": 0.9451,
+     "median_block_p50": 2.0,
+     "share_from_batch_blocks": 0.0,
+     "share_in_same_tx": 0.6539
+    },
+    {
+     "rev_half": "2025H2",
+     "owner_sweeps": 937,
+     "anchor_in_same_tx": 205,
+     "anchor_spent_later": 0,
+     "median_sweep_feerate": 1.0935,
+     "share_sweep_below_breakeven": 0.8762,
+     "median_block_p50": 1.0,
+     "share_from_batch_blocks": 0.0,
+     "share_in_same_tx": 0.2188
+    },
+    {
+     "rev_half": "2026H1",
+     "owner_sweeps": 5219,
+     "anchor_in_same_tx": 46,
+     "anchor_spent_later": 0,
+     "median_sweep_feerate": 0.913,
+     "share_sweep_below_breakeven": 0.9977,
+     "median_block_p50": 1.0,
+     "share_from_batch_blocks": 0.5518,
+     "share_in_same_tx": 0.0088
+    },
+    {
+     "rev_half": "2026H2",
+     "owner_sweeps": 8672,
+     "anchor_in_same_tx": 4,
+     "anchor_spent_later": 0,
+     "median_sweep_feerate": 0.913,
+     "share_sweep_below_breakeven": 0.9995,
+     "median_block_p50": 1.0,
+     "share_from_batch_blocks": 0.9515,
+     "share_in_same_tx": 0.0005
+    }
+   ],
+   "owner_sweeps_note": "One row per anchor whose owner swept the matching main output while the anchor was unspent (reveal leaf to_local_delay / to_remote / second_level_delay). anchor_in_same_tx: the anchor was an input of that sweep. share_sweep_below_breakeven: the sweep paid less than 330/57.5 = 5.74 sat/vB, so adding the anchor by key path would have added value to the owner.",
+   "owner_sweeps_by_half_leaf_batch_block": [
+    {
+     "rev_half": "2023H2",
+     "rev_leaf": "to_local_delay",
+     "batch_block": false,
+     "n": 6,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2023H2",
+     "rev_leaf": "to_remote",
+     "batch_block": false,
+     "n": 14,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2024H1",
+     "rev_leaf": "to_local_delay",
+     "batch_block": false,
+     "n": 70,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2024H1",
+     "rev_leaf": "to_remote",
+     "batch_block": false,
+     "n": 83,
+     "in_same_tx": 7
+    },
+    {
+     "rev_half": "2024H2",
+     "rev_leaf": "to_local_delay",
+     "batch_block": false,
+     "n": 127,
+     "in_same_tx": 15
+    },
+    {
+     "rev_half": "2024H2",
+     "rev_leaf": "to_remote",
+     "batch_block": false,
+     "n": 139,
+     "in_same_tx": 113
+    },
+    {
+     "rev_half": "2025H1",
+     "rev_leaf": "second_level_delay",
+     "batch_block": false,
+     "n": 1,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2025H1",
+     "rev_leaf": "to_local_delay",
+     "batch_block": false,
+     "n": 144,
+     "in_same_tx": 11
+    },
+    {
+     "rev_half": "2025H1",
+     "rev_leaf": "to_remote",
+     "batch_block": false,
+     "n": 274,
+     "in_same_tx": 263
+    },
+    {
+     "rev_half": "2025H2",
+     "rev_leaf": "second_level_delay",
+     "batch_block": false,
+     "n": 3,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2025H2",
+     "rev_leaf": "to_local_delay",
+     "batch_block": false,
+     "n": 516,
+     "in_same_tx": 8
+    },
+    {
+     "rev_half": "2025H2",
+     "rev_leaf": "to_remote",
+     "batch_block": false,
+     "n": 418,
+     "in_same_tx": 197
+    },
+    {
+     "rev_half": "2026H1",
+     "rev_leaf": "second_level_delay",
+     "batch_block": false,
+     "n": 1,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2026H1",
+     "rev_leaf": "to_local_delay",
+     "batch_block": false,
+     "n": 1484,
+     "in_same_tx": 4
+    },
+    {
+     "rev_half": "2026H1",
+     "rev_leaf": "to_local_delay",
+     "batch_block": true,
+     "n": 2515,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2026H1",
+     "rev_leaf": "to_remote",
+     "batch_block": false,
+     "n": 854,
+     "in_same_tx": 42
+    },
+    {
+     "rev_half": "2026H1",
+     "rev_leaf": "to_remote",
+     "batch_block": true,
+     "n": 365,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2026H2",
+     "rev_leaf": "to_local_delay",
+     "batch_block": false,
+     "n": 225,
+     "in_same_tx": 1
+    },
+    {
+     "rev_half": "2026H2",
+     "rev_leaf": "to_local_delay",
+     "batch_block": true,
+     "n": 6766,
+     "in_same_tx": 0
+    },
+    {
+     "rev_half": "2026H2",
+     "rev_leaf": "to_remote",
+     "batch_block": false,
+     "n": 196,
+     "in_same_tx": 3
+    },
+    {
+     "rev_half": "2026H2",
+     "rev_leaf": "to_remote",
+     "batch_block": true,
+     "n": 1485,
+     "in_same_tx": 0
+    }
+   ],
+   "commitments_by_close_half": [
+    {
+     "close_half": "2023H2",
+     "closes": 17,
+     "median_commit_feerate": 10.0742,
+     "share_clears_prev_block_p10": 0.4118,
+     "share_child_same_block": 0.4706,
+     "share_anchor_same_block": 0.4706,
+     "share_in_batch_blocks": 0.0
+    },
+    {
+     "close_half": "2024H1",
+     "closes": 96,
+     "median_commit_feerate": 18.6623,
+     "share_clears_prev_block_p10": 0.7396,
+     "share_child_same_block": 0.0729,
+     "share_anchor_same_block": 0.0729,
+     "share_in_batch_blocks": 0.0
+    },
+    {
+     "close_half": "2024H2",
+     "closes": 168,
+     "median_commit_feerate": 7.0604,
+     "share_clears_prev_block_p10": 0.8036,
+     "share_child_same_block": 0.0595,
+     "share_anchor_same_block": 0.0595,
+     "share_in_batch_blocks": 0.0
+    },
+    {
+     "close_half": "2025H1",
+     "closes": 524,
+     "median_commit_feerate": 3.3458,
+     "share_clears_prev_block_p10": 0.8263,
+     "share_child_same_block": 0.0134,
+     "share_anchor_same_block": 0.0095,
+     "share_in_batch_blocks": 0.0
+    },
+    {
+     "close_half": "2025H2",
+     "closes": 1081,
+     "median_commit_feerate": 1.2042,
+     "share_clears_prev_block_p10": 0.8437,
+     "share_child_same_block": 0.0167,
+     "share_anchor_same_block": 0.0167,
+     "share_in_batch_blocks": 0.0
+    },
+    {
+     "close_half": "2026H1",
+     "closes": 4072,
+     "median_commit_feerate": 1.0823,
+     "share_clears_prev_block_p10": 0.9693,
+     "share_child_same_block": 0.0052,
+     "share_anchor_same_block": 0.0052,
+     "share_in_batch_blocks": 0.6184
+    },
+    {
+     "close_half": "2026H2",
+     "closes": 8156,
+     "median_commit_feerate": 1.0208,
+     "share_clears_prev_block_p10": 0.9969,
+     "share_child_same_block": 0.0012,
+     "share_anchor_same_block": 0.001,
+     "share_in_batch_blocks": 0.9663
+    }
+   ],
+   "close_concentration": {
+    "batch_block_min_closes": 50,
+    "blocks_with_taproot_closes": 2263,
+    "batch_blocks": 24,
+    "share_of_closes_in_batch_blocks": 0.7368
+   }
+  },
+  "paper": {
+   "early_half": "2025H1",
+   "late_half": "2026H2",
+   "unspent_anchors": 22158,
+   "unspent_btc": 0.0731214,
+   "key_public_unspent_anchors": 14828,
+   "key_public_btc": 0.0489324,
+   "key_public_net_btc_at_1_sat_vb": 0.04144426,
+   "script_path_vb": 50.5,
+   "script_path_breakeven_sat_vb": 6.534653465346534,
+   "largest_p2wsh_sweeper_net_btc": 0.06967455,
+   "unspent_output_share": 0.16537055004104784,
+   "unspent_value_share": 0.00017572352592526403,
+   "force_close_outputs_unspent_at_cutoff": 133990,
+   "coin_entry_bytes": 74,
+   "utxo_set_share": 0.00012358956057651515,
+   "utxo_set_checkpoint_height": 972800,
+   "owner_spends_early": 775,
+   "owner_spends_late": 12,
+   "owner_spends_late_same_block": 8,
+   "cosweep_to_remote_early": {
+    "n": 274,
+    "in_same_tx": 263,
+    "share": 0.9598540145985401
+   },
+   "cosweep_to_remote_late": {
+    "n": 1681,
+    "in_same_tx": 3,
+    "share": 0.001784651992861392
+   },
+   "cosweep_to_remote_late_outside_batch_blocks": {
+    "n": 196,
+    "in_same_tx": 3,
+    "share": 0.015306122448979591
+   },
+   "owner_sweep_feerate_median_early": 2.0,
+   "owner_sweep_feerate_median_late": 0.913
+  }
+ }
+}

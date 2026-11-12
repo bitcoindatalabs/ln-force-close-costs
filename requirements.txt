@@ -1,0 +1,8 @@
+# Versions the published numbers were produced with (2026-11-03). DuckDB 2.x is required (relations keep no result).
+duckdb>=2.0.0
+pandas>=3.0
+pyarrow>=20.0
+numpy>=2.0
+matplotlib>=3.10
+statsmodels>=0.15
+requests>=2.32

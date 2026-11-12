@@ -1,0 +1,98 @@
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Force closes and their formats}
+A commitment transaction carries a fingerprint: the upper byte of its locktime is \texttt{0x20} and that of its single
+input's sequence is \texttt{0x80}, because the two fields encode the obscured commitment number~\cite{bolt3}. We call a
+transaction a force close when it has this fingerprint and spends a 2-of-2 multisignature output or a taproot output by
+its key path. Its format is \emph{zero-fee} if it is a version-3 transaction with a pay-to-anchor output,
+\emph{simple taproot} if it spends a taproot output, \emph{anchor} if it has at least one anchor output, and
+\emph{pre-anchor} otherwise.
+
+\subsection{Rates and cohorts}
+Counts of closes follow the size of the network, so we also report rates. A public channel is \emph{open} at a height
+when its funding output is still unspent. Channels whose nodes have left the network count as open until they are
+closed on-chain, which is right for a rate of on-chain closes but inflates the denominator as such channels
+accumulate. The force-close rate is the number of public force closes per 1,000 open public channels per month (or
+week). Following our first paper~\cite{kumar2026clientdiversity}, a \emph{mass-close event} is a node party to at least
+20 public force closes on one UTC day; \emph{organic} force closes are the others. The \emph{cohort incidence} at age
+$a$ is the share of the public channels funded in a year that were force-closed by age $a$, among those funded at
+least $a$ before the cutoff. Open channels do not enter it, so it is not biased by abandoned channels; we draw a curve
+while at least half of its cohort is observed.
+
+\subsection{The cost of a force close}
+We count every transaction a force close requires, in three currencies. \emph{Fees}: the commitment's fee; an anchor
+spend by its owner in the commitment's block, a CPFP fee bump, counted in full; HTLC transactions and claims; the
+broadcaster's delayed \texttt{to\_local} sweep; the \texttt{to\_remote} sweep of anchor channels, which the one-block
+delay makes a separate step; and later anchor spends by their owner, which we call cleanup. A spend that batches several
+inputs is split equally among them; charging each close the whole transaction gives an upper bound. Not counted: the
+\texttt{to\_remote} spend of a pre-anchor channel, a plain wallet output like those of a cooperative close; third-party
+anchor sweeps, which are paid from the anchors' own 330~sat; and penalties, reported apart. Each year's median is set
+against the median fee of a cooperative close in the same year. \emph{Time}: the days from the close until the
+broadcaster's \texttt{to\_local} can be swept, from the \texttt{to\_self\_delay} revealed in its witness, and the
+balance times that wait (BTC-days). To set the wait against the fees without assuming a cost of capital, the
+break-even rate is the yearly return on the locked balances at which a year's BTC-days would cost as much as that
+year's force-close fees. \emph{Block space}: the virtual bytes of the same transactions.
+
+\subsection{HTLC deadlines}
+\label{sec:htlc-method}
+The chain gives each HTLC's expiry: an HTLC-timeout transaction's locktime is the expiry, because its pre-signed
+signature commits to it, and a received HTLC's script, revealed when it is spent, contains it~\cite{bolt3}. We measure
+how many blocks after its expiry each HTLC-timeout transaction confirmed and, for HTLC-success transactions, how many
+blocks before. The yardstick is the margin a forwarding node keeps, its \texttt{cltv\_expiry\_delta}: we use
+\HtlcMarginTight{} blocks, the tenth percentile of the values public channels advertised in our daily gossip
+snapshots from \CltvDeltaFrom{} to the cutoff, and \HtlcMarginMid, their median.
+The fee condition is the median fee rate of the block at the expiry. To compare formats we use the HTLCs whose
+commitment had confirmed by the expiry, so that the delay is the HTLC transaction's own. Both HTLC scripts also contain
+a hash of the payment hash; until point time-locked contracts replace hashes, every hop of a payment and every part of
+a multi-part payment share it, so the same hash in two force closes marks one payment.
+
+\subsection{Lifecycle cost}
+For each public channel closed at least four weeks before the cutoff, the lifecycle cost adds the channel's share of
+its funding transaction's fee to the cost of its close and required spends (as above, or the fee of the cooperative
+close). A funding transaction's fee is split equally among the channels it opens; its other outputs count as the
+opener's change and pay nothing, because the change exists only because of the open. A splice is charged once, to the
+new channel's open. Rules that also charge change outputs, by value or by size, are reported as a robustness check.
+
+\subsection{Anchors and who sweeps them}
+Each P2WSH anchor is spent by its owner in the commitment's block (a bump), by its owner later (cleanup), by a third
+party (an input with an empty signature, possible from the sixteenth block), or not at all. For a same-block owner
+spend we also test whether the child raised the fee rate of the package, which separates a bump from cleanup that
+happened to confirm in the same block. Third-party sweeps are collected chain-wide, including anchors of commitments we
+never saw, and each sweep's 330~sat per anchor is split between the fee (to miners) and the outputs (to the sweeper).
+The break-even fee rate, at which the fee for one anchor input equals the anchor's value, is \BreakEven~sat/vB. To
+measure concentration we link sweep transactions that spend each other's outputs or pay the same address; each
+connected group is an operator. Sweeps whose outputs are all \texttt{OP\_RETURN} give everything to miners and are
+counted apart. We report shares only and name no operator or address.
+
+\subsection{Fee spikes}
+\label{sec:spike-method}
+To test whether fee spikes bring force closes we use an event study and a regression. A \emph{spike week} has a median
+block fee rate at least \SpikeRule{} times that of the previous eight weeks and at least \SpikeMinFee~sat/vB; only the
+first week of a cluster counts. We compare organic public force closes in the spike week and the week after with the
+four weeks before, pooled over all spikes. The regression, by week, relates the logarithm of organic public force
+closes per open channel to the logarithm of the median block fee rate, with year fixed effects and a linear trend, so
+that weeks are compared within the same fee regime rather than 2023 with 2025. We fit it with the fee rate of the same
+week, of one to four weeks earlier and of one week later.
+
+We judge both against placebos that keep the force-close series as observed and break only its timing against fees.
+(A) For each spike, an ordinary week of the same year is drawn at random, away from every real spike
+(\PlWeekDraws{} draws). (B) Each year's fee series is cut into \PlBlockWeeks-week blocks, which are shuffled within the
+year (\PlBlockDraws{} draws). (C) The fee series' deviations from its year means and trend are rotated by every shift of
+at least \PlMinShift{} weeks (\PlShifts{} shifts), which keeps all of its autocorrelation. A result's percentile is the
+share of draws below it. The random seed (\PlSeed) and the verdict rules were fixed before the full run: a wave counts
+only if the spike ratio is above 95\% of placebo~A, and a delayed rise only if the largest coefficient of lags one to
+four beats the largest in each draw at $p<0.05$ under both B and C. We do not use Newey--West intervals: under the
+placebos, nominal 5\% tests rejected in \PlNwRejectBlockMin--\PlNwRejectBlockMax\% of draws of B and
+\PlNwRejectCircMin--\PlNwRejectCircMax\% of draws of C.
+
+\emph{Fee guessing.} A commitment's fee rate is compared with the median and the tenth percentile of the fee rates in
+its own block. \emph{Sweep timing.} A third-party sweep's block is compared with the block sixteen blocks after the
+close, when the sweep first became possible. \emph{Closing bill.} The fees and block space of every close and required
+spend, public or not, plus third-party sweeps, are compared with all transaction fees and block weight in each year.
+
+\subsection{Zero-fee counterfactual}
+For every anchor force close we compare the block space of the anchor mechanism, two 43-vB anchor outputs and the
+transactions that spend them, with that of a zero-fee commitment: one 13-vB pay-to-anchor output, spent in the same
+package, and a child with a wallet input and change for the closes that were not already bumped. An owner's anchor
+input takes 69.75~vB, a third party's 51.75~vB (measured on mainnet sweeps) and a pay-to-anchor input 41.25~vB.

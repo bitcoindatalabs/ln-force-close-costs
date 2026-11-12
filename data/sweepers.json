@@ -1,0 +1,363 @@
+{
+ "operators": 332,
+ "anchors": 286947,
+ "txs": 25343,
+ "largest_share": 0.4118286652238915,
+ "largest_first": "2024-07-27",
+ "largest_last": "2026-10-31",
+ "largest_txs": 17067,
+ "largest_net_btc": 0.06967455,
+ "operators_over_1pct": 15,
+ "burn_share": 0.09824113860747803,
+ "burn_txs": 2558,
+ "by_year": [
+  {
+   "y": 2022,
+   "burn": 0.0003290014805066623,
+   "largest": 0.0,
+   "others": 0.9996709985194934
+  },
+  {
+   "y": 2023,
+   "burn": 0.13153853536807755,
+   "largest": 0.0,
+   "others": 0.8684614646319224
+  },
+  {
+   "y": 2024,
+   "burn": 0.14403040896392752,
+   "largest": 0.23328804555238372,
+   "others": 0.6226815454836888
+  },
+  {
+   "y": 2025,
+   "burn": 0.04381369233149855,
+   "largest": 0.6449366668877247,
+   "others": 0.31124964078077677
+  },
+  {
+   "y": 2026,
+   "burn": 0.12063734896022403,
+   "largest": 0.5774646061297516,
+   "others": 0.30189804491002437
+  }
+ ],
+ "by_month": [
+  {
+   "m": "2022-01",
+   "burn": 0,
+   "largest": 0,
+   "others": 853
+  },
+  {
+   "m": "2022-02",
+   "burn": 0,
+   "largest": 0,
+   "others": 883
+  },
+  {
+   "m": "2022-03",
+   "burn": 0,
+   "largest": 0,
+   "others": 574
+  },
+  {
+   "m": "2022-04",
+   "burn": 0,
+   "largest": 0,
+   "others": 857
+  },
+  {
+   "m": "2022-05",
+   "burn": 4,
+   "largest": 0,
+   "others": 1504
+  },
+  {
+   "m": "2022-06",
+   "burn": 0,
+   "largest": 0,
+   "others": 577
+  },
+  {
+   "m": "2022-07",
+   "burn": 0,
+   "largest": 0,
+   "others": 476
+  },
+  {
+   "m": "2022-08",
+   "burn": 0,
+   "largest": 0,
+   "others": 824
+  },
+  {
+   "m": "2022-09",
+   "burn": 0,
+   "largest": 0,
+   "others": 800
+  },
+  {
+   "m": "2022-10",
+   "burn": 0,
+   "largest": 0,
+   "others": 2128
+  },
+  {
+   "m": "2022-11",
+   "burn": 0,
+   "largest": 0,
+   "others": 1459
+  },
+  {
+   "m": "2022-12",
+   "burn": 0,
+   "largest": 0,
+   "others": 1219
+  },
+  {
+   "m": "2023-01",
+   "burn": 1,
+   "largest": 0,
+   "others": 1460
+  },
+  {
+   "m": "2023-02",
+   "burn": 0,
+   "largest": 0,
+   "others": 1199
+  },
+  {
+   "m": "2023-03",
+   "burn": 422,
+   "largest": 0,
+   "others": 5852
+  },
+  {
+   "m": "2023-04",
+   "burn": 17,
+   "largest": 0,
+   "others": 3157
+  },
+  {
+   "m": "2023-07",
+   "burn": 4709,
+   "largest": 0,
+   "others": 3657
+  },
+  {
+   "m": "2023-08",
+   "burn": 0,
+   "largest": 0,
+   "others": 93
+  },
+  {
+   "m": "2023-09",
+   "burn": 333,
+   "largest": 0,
+   "others": 11930
+  },
+  {
+   "m": "2023-10",
+   "burn": 0,
+   "largest": 0,
+   "others": 8530
+  },
+  {
+   "m": "2023-11",
+   "burn": 0,
+   "largest": 0,
+   "others": 316
+  },
+  {
+   "m": "2024-03",
+   "burn": 547,
+   "largest": 0,
+   "others": 0
+  },
+  {
+   "m": "2024-04",
+   "burn": 2,
+   "largest": 0,
+   "others": 11582
+  },
+  {
+   "m": "2024-07",
+   "burn": 1543,
+   "largest": 3,
+   "others": 20854
+  },
+  {
+   "m": "2024-08",
+   "burn": 812,
+   "largest": 4968,
+   "others": 2589
+  },
+  {
+   "m": "2024-09",
+   "burn": 880,
+   "largest": 4413,
+   "others": 124
+  },
+  {
+   "m": "2024-10",
+   "burn": 3362,
+   "largest": 2565,
+   "others": 1998
+  },
+  {
+   "m": "2024-11",
+   "burn": 1478,
+   "largest": 2061,
+   "others": 2112
+  },
+  {
+   "m": "2024-12",
+   "burn": 811,
+   "largest": 1272,
+   "others": 1531
+  },
+  {
+   "m": "2025-01",
+   "burn": 344,
+   "largest": 2786,
+   "others": 34
+  },
+  {
+   "m": "2025-02",
+   "burn": 237,
+   "largest": 2834,
+   "others": 604
+  },
+  {
+   "m": "2025-03",
+   "burn": 93,
+   "largest": 2009,
+   "others": 0
+  },
+  {
+   "m": "2025-04",
+   "burn": 55,
+   "largest": 3130,
+   "others": 49
+  },
+  {
+   "m": "2025-05",
+   "burn": 66,
+   "largest": 2578,
+   "others": 8
+  },
+  {
+   "m": "2025-06",
+   "burn": 40,
+   "largest": 1784,
+   "others": 13405
+  },
+  {
+   "m": "2025-07",
+   "burn": 2246,
+   "largest": 9160,
+   "others": 12874
+  },
+  {
+   "m": "2025-08",
+   "burn": 90,
+   "largest": 1997,
+   "others": 27
+  },
+  {
+   "m": "2025-09",
+   "burn": 40,
+   "largest": 10758,
+   "others": 98
+  },
+  {
+   "m": "2025-10",
+   "burn": 105,
+   "largest": 10140,
+   "others": 249
+  },
+  {
+   "m": "2025-11",
+   "burn": 396,
+   "largest": 3266,
+   "others": 45
+  },
+  {
+   "m": "2025-12",
+   "burn": 252,
+   "largest": 7908,
+   "others": 767
+  },
+  {
+   "m": "2026-01",
+   "burn": 1040,
+   "largest": 9910,
+   "others": 940
+  },
+  {
+   "m": "2026-02",
+   "burn": 310,
+   "largest": 7585,
+   "others": 4210
+  },
+  {
+   "m": "2026-03",
+   "burn": 28,
+   "largest": 6525,
+   "others": 4909
+  },
+  {
+   "m": "2026-04",
+   "burn": 10,
+   "largest": 2929,
+   "others": 1669
+  },
+  {
+   "m": "2026-05",
+   "burn": 565,
+   "largest": 2417,
+   "others": 1176
+  },
+  {
+   "m": "2026-06",
+   "burn": 25,
+   "largest": 1121,
+   "others": 2364
+  },
+  {
+   "m": "2026-07",
+   "burn": 2,
+   "largest": 362,
+   "others": 4456
+  },
+  {
+   "m": "2026-08",
+   "burn": 3866,
+   "largest": 2528,
+   "others": 2663
+  },
+  {
+   "m": "2026-09",
+   "burn": 2255,
+   "largest": 7545,
+   "others": 680
+  },
+  {
+   "m": "2026-10",
+   "burn": 1204,
+   "largest": 3619,
+   "others": 219
+  }
+ ],
+ "penalty_wave": {
+  "txs": 306,
+  "recipient_addresses": 306,
+  "top_address_share_of_txs": 0.0032679738562091504,
+  "outputs_btc": 3.20994898,
+  "output_types": {
+   "witness_v0_keyhash": 298,
+   "witness_v1_taproot": 8
+  }
+ }
+}

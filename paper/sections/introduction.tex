@@ -1,0 +1,69 @@
+\section{Introduction}
+\label{sec:intro}
+
+The Lightning Network is a payment network built on Bitcoin. Its nodes hold their operators' funds in two-party
+payment channels, each backed by one output on the Bitcoin chain. When both parties agree, a channel closes
+cooperatively with one ordinary transaction. When they cannot, because a peer is offline, a payment is stuck or the two
+implementations disagree, either party can force-close the channel: it broadcasts the latest commitment transaction,
+signed in advance by both, and then claims its share through further pre-signed and time-locked
+transactions~\cite{poon2016bitcoin,bolt3,bolt5}. The fees and delays of those transactions fall on the operators, and
+a transaction that confirms too late can lose a pending payment or let a cheating peer
+win~\cite{harris2020flood,riard2020timedilation,riard2023replacement}. The fee design of these transactions is
+changing now. Bitcoin Core 31.0 (April~2026) removed the CPFP carve-out, the mempool rule that anchor channels were
+designed around~\cite{core31}, and in May~2026 the Lightning specification adopted zero-fee commitments, which rely on
+newer relay rules instead~\cite{bolts1228zerofee,bip431,core28}. This paper measures the old design, across the fee
+regimes it lived through, before the migration, as a baseline for judging the new one.
+
+Force closes have been counted~\cite{bitmex2020closures,zabka2022empirical,grotschla2025lifecycle} and
+predicted~\cite{antonelli2026closures}, but what they cost has not been measured across fee regimes. The questions
+that shaped the design are argued in developer forums from a few nodes' logs or from none: whether owners use their
+anchor outputs to bump fees, whether third parties sweep them at a profit, and whether fee spikes force channels
+closed~\cite{daftuar2024v3,lnd8997}. Our previous paper measured the cost of force closes over a few months of low
+fees in 2026~\cite{kumar2026clientdiversity}.
+
+We measure it from the chain.
+We follow every close of every public channel since Lightning's first channels in January~2018, find the force
+closes of channels outside the public graph by the fingerprint of their commitment transaction, and follow each of
+their \NOutputs{} outputs to the transaction that spent it: \NClosesAll{} closes in all, \NForceAll{} of them force
+closes. Fee statistics for every block, from our own node, place each transaction in the fee market of its block.
+The main answer is that fee spikes do not bring a wave of force closes. In the week of a spike and the week after,
+force closes were \PlEvAllNow{} times their level in the four weeks before, while ordinary weeks of the same years
+show \PlEvAllNowMed. That holds for pre-anchor channels, whose commitment fee is fixed when it is signed, as for anchor
+channels, whose fee can be raised at broadcast. The cost of a force close lies elsewhere: in its ratio to a cooperative close, in
+the days the closer's funds stay locked, and in the exposure of pending payments when fees are high. The wait
+outweighs the fees only in low-fee years, and the exposure has rarely become a loss. We make five contributions.
+
+\begin{itemize}
+\item \textbf{A census with rates.} Force closes became rarer per channel, and private channels now produce most of
+them. Of the public channels funded in 2019, \CohortOneYearNineteen\% were force-closed within a year; of those
+funded in 2025, \CohortOneYearTwentyFive\%. The force share of public closes fell from \ForceShareTwentyThree\% in
+2023 to \ForceShareTwentySix\% in 2026. In 2026 force closes of channels outside the public graph outnumbered public
+ones \UnlOverPubTwentySix{} to one (\S\ref{sec:census}).
+\item \textbf{The cost of a force close in fees, time and block space.} A force close costs
+\CostRatioMin--\CostRatioMax{} times a cooperative close in fees and, since 2022, about three times its block space; the
+closer waits a median of \ToLocalMedDays{} days for its own balance, which outweighs the fees only in the low-fee
+years 2025--26. Counting the open as well, a public channel's whole life cost a median of \LcMed{}~sat on-chain. When
+fees are high, HTLC timeouts confirm late, and anchor channels' timeouts less often than pre-anchor ones. Yet
+forwarders lost few payments: \SplitResForwarderPayments{} since \SplitResFromYear, all with the preimage on-chain
+first. The only losses in the order a replacement-cycling attack leaves were a test that one operator ran against its
+own node, and 2026's one wave of penalties matches a splicing bug already fixed in Core Lightning
+(\S\ref{sec:cost}).
+\item \textbf{The anchor money trail.} Anchor outputs became third-party dust. Owners spent
+\OwnerPctTwentyTwo\% of anchors in 2022 and \OwnerPctTwentySix\% in 2026; third parties sweep the rest, from 2025 at
+the first block they can, and fees took \MinersShareTwentySix\% of the swept value in 2026. No P2WSH anchor was left
+unspent, while no third party has swept a simple-taproot anchor, so the premise of an open LND proposal to stop
+sweeping anchors holds only for the older kind (\S\ref{sec:anchors}).
+\item \textbf{Fee regimes.} Fee spikes did not bring a wave of force closes, judged against placebo weeks of
+the same years. Fixed commitment fees overpaid in calm
+markets, and all of Lightning's closes and required spends took at most
+\BillFeePctMax\% of Bitcoin's transaction fees in any year (\S\ref{sec:fees}).
+\item \textbf{The first zero-fee commitments.} The first zero-fee commitment closed on \ZfFirst, before the
+specification was merged. Across the anchor force closes we observe, the new format would have saved
+\CfSavingPct\% of the anchor mechanism's block space (\S\ref{sec:zerofee}).
+\end{itemize}
+
+This is the third paper of a programme on the Lightning Network's resilience. The first asked whether client diversity
+protects the network when one implementation fails~\cite{kumar2026clientdiversity}, the second who patches
+it~\cite{kumar2026upgradedynamics}, and this one what a failed channel costs on-chain. All data behind the figures,
+tables and in-text numbers are released with the code. We report aggregates only: no node, address or transaction is
+named.

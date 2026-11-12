@@ -1,0 +1,53 @@
+\section{Data}
+\label{sec:data}
+
+\paragraph{The chain}
+We scan every block from block \ScanStartHeight{}, before Lightning's first channels, to block \CutoffHeight{}, the last
+block mined before 1~November~2026 00:00~UTC, with our own Bitcoin Core node. For every block we keep its fee
+statistics (\texttt{getblockstats}: the size-weighted percentiles of fee rates, total fees and total weight). A full
+index of the chain built from the same node, with every transaction's locktime and every input's witness, gives the
+HTLC expiries and the funding fees used in \S\ref{sec:htlc} and \S\ref{sec:lifecycle}.
+On the blocks from 2021, which we also queried from the node directly, its fee totals agree with
+\texttt{getblockstats} on every block.
+
+\paragraph{Public channels}
+Our list of public channels joins our own gossip since May~2023, mempool.space's record of closed channels and their
+close reasons~\cite{mempoolspace}, and the lnresearch gossip archive for the earlier
+years~\cite{lnresearchtopology}. A short channel ID encodes the block, transaction and output of the channel's funding
+output, so the list resolves to \NFundingOutpoints{} funding outpoints, each to the transaction that spends it: the
+close. The list holds few of the channels that closed in 2018: the gossip archive and mempool.space's record become
+dense only in January~2019, and only about 1\% of 2018's force closes are of listed channels. For 2018 we therefore
+report force closes only, listed or not, which the commitment fingerprint finds completely; public, cooperative,
+force-share and per-channel series start in 2019, and January~2019 is still incomplete.
+
+\paragraph{Closes and their outputs}
+A close is cooperative or forced; a close that funds a new channel in the same transaction is a splice and is left
+out. Force closes of channels that are not in the list are found by the fingerprint of the commitment transaction
+alone (\S\ref{sec:methods}); we call them \emph{unlisted}. Up to the cutoff the data hold \NPublicCloses{} closes of
+public channels (\NPublicMutual{} cooperative, \NPublicForce{} forced) and \NUnlistedForce{} unlisted force closes.
+For each of the \NOutputs{} outputs of these \NForceAll{} force closes we record the transaction that spent it, if one
+had by the cutoff (\NOutputsSpent{} did), and classify the spend from its witness script: the broadcaster's delayed
+sweep, the peer's sweep, an HTLC transaction or claim, an anchor spend by its owner or by a third party, or a penalty.
+Statistics about what happens to a close's outputs use only closes confirmed at least 4,032 blocks (four weeks) before
+the cutoff, so that their outputs had time to be spent.
+
+\paragraph{Validation}
+We check the closes two ways. First, the chain index above is a separate extraction of the chain, by a different
+program: in it, the transaction that spends each public channel's funding output is the close we recorded, for all
+\ValLakeCompared{} closes that could be compared, and its shape, with or without the commitment fingerprint, matches
+our force or cooperative label in every case. Second, mempool.space gives a close reason for
+\ValCoverageYearMinPct--\ValCoverageYearMaxPct\% of the public channels that closed in each year from 2019 to 2025,
+and none for 2026. It labels closes from the chain as well, so agreement with it is a check
+of consistency, not independent validation. Where it gives a reason, for \ValCompared{} of our public closes
+(\ValCoveragePct\%), our label agrees on \ValAgreePct\%.
+
+\paragraph{Client labels}
+For the appendix we attach to each public close the implementations at its two ends, using the labels and
+classifier of our first paper on the day of the close~\cite{kumar2026clientdiversity}. They exist from May~2023 and
+inherit that paper's accuracy.
+
+\paragraph{What the chain does not show}
+The chain does not show which party broadcast a force close, so every cost is per channel, both parties together. It
+shows fee bumps that confirmed, not those that were tried and failed. Private channels appear only when they force
+close: their cooperative closes look like ordinary payments, so their number and their force-close rate are unknown.
+\S\ref{sec:limitations} lists the consequences.

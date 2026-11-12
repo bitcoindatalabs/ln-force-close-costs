@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\caption{What a public channel's life costs on-chain: funding share, close and required spends, by year of close (medians, sat unless stated).}
+\label{tab:lifecycle}
+\footnotesize
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Closed & Channels & Force \% & Open & Coop. & Force & All & Range & p90 & \% cap. & Opens \% & BTC \\
+\midrule
+2019 & 60{,}405 & 49.7 & 2{,}429 & 8{,}322 & 11{,}021 & 9{,}581 & 7{,}842--9{,}581 & 28{,}253 & 1.29 & 36.3 & 8.00 \\
+2020 & 46{,}598 & 38.2 & 2{,}362 & 9{,}061 & 19{,}174 & 12{,}750 & 10{,}708--12{,}750 & 38{,}299 & 1.51 & 36.6 & 8.55 \\
+2021 & 91{,}441 & 30.0 & 925 & 2{,}127 & 8{,}329 & 3{,}368 & 2{,}701--3{,}368 & 30{,}606 & 0.39 & 47.0 & 10.11 \\
+2022 & 150{,}542 & 38.5 & 361 & 1{,}162 & 4{,}249 & 2{,}153 & 1{,}790--2{,}153 & 7{,}859 & 0.10 & 44.9 & 6.04 \\
+2023 & 112{,}481 & 44.5 & 1{,}069 & 3{,}864 & 10{,}119 & 6{,}106 & 5{,}090--6{,}106 & 33{,}969 & 0.22 & 30.0 & 20.51 \\
+2024 & 79{,}763 & 36.2 & 2{,}290 & 5{,}544 & 10{,}710 & 7{,}032 & 5{,}437--7{,}032 & 31{,}803 & 0.18 & 44.3 & 14.07 \\
+2025 & 79{,}656 & 27.0 & 477 & 907 & 2{,}374 & 1{,}261 & 937--1{,}261 & 5{,}331 & 0.03 & 62.0 & 2.40 \\
+2026\textsuperscript{a} & 71{,}639 & 20.1 & 309 & 626 & 1{,}450 & 785 & 569--785 & 2{,}927 & 0.01 & 64.6 & 1.24 \\
+\midrule
+All & 692{,}525 & 35.8 & 723 & 1{,}970 & 6{,}645 & 3{,}435 & 2{,}804--3{,}435 & 23{,}171 & 0.15 & 39.7 & 70.92 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize \textsuperscript{a}Closes to 4 October 2026 (four weeks for outputs to be spent). Open: the channel's share of its funding transaction's fee, split equally over the channel outputs of the transaction; other outputs are the funder's change and pay nothing. Range: the median lifecycle if every output, change included, pays for its own size, and with the equal split. Coop., Force: lifecycles ending in a cooperative or a force close; force closes as in Table~II. \% cap.: median lifecycle fees over capacity. Opens \%: opens' share of all lifecycle fees. BTC: all lifecycle fees. Closes from 2019: our list of public channels holds few of the channels that closed in 2018.}
+\end{table*}

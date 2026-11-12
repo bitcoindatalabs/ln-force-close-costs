@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{Lightning channel closes on the chain, 2018--2026. All force: every force close, public or not. Public: channels in our list of every public channel. Unlisted: force closes of channels outside it, found by the commitment pattern.}
+\label{tab:census}
+\footnotesize
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Year & All force & Coop. & Force & Force \% & Force BTC & Age (d) & Unlisted & Unl. BTC & Pub. legacy \% & Unl. taproot \% \\
+\midrule
+2018\textsuperscript{b} & 35{,}218 & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+2019\textsuperscript{c} & 52{,}148 & 30{,}404 & 30{,}001 & 49.7 & 679 & 80 & 22{,}147 & 411 & 100.0 & 0.0 \\
+2020 & 29{,}877 & 28{,}785 & 17{,}813 & 38.2 & 581 & 159 & 12{,}064 & 198 & 100.0 & 0.0 \\
+2021 & 39{,}539 & 64{,}048 & 27{,}393 & 30.0 & 1{,}123 & 94 & 12{,}146 & 179 & 87.5 & 0.0 \\
+2022 & 73{,}569 & 92{,}645 & 57{,}896 & 38.5 & 3{,}226 & 133 & 15{,}673 & 264 & 44.8 & 0.0 \\
+2023 & 76{,}869 & 62{,}481 & 49{,}998 & 44.5 & 3{,}363 & 151 & 26{,}871 & 764 & 40.2 & 0.1 \\
+2024 & 76{,}634 & 50{,}874 & 28{,}888 & 36.2 & 2{,}208 & 215 & 47{,}746 & 1{,}410 & 33.9 & 0.6 \\
+2025 & 71{,}498 & 58{,}137 & 21{,}518 & 27.0 & 1{,}975 & 242 & 49{,}980 & 838 & 23.4 & 3.2 \\
+2026\textsuperscript{a} & 68{,}463 & 62{,}311 & 15{,}440 & 19.9 & 2{,}279 & 142 & 53{,}023 & 974 & 25.6 & 23.1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize \textsuperscript{a}January--October. \textsuperscript{b}From 12 January (block 503,816). Our list of public channels holds few of the channels that closed in 2018, so only the force-close total is shown. \textsuperscript{c}The list's coverage is still ramping up in January 2019. Age: median age at force close. Pub.\ legacy: share of public force closes with a pre-anchor commitment. Unl.\ taproot: share of unlisted force closes of simple taproot channels. Splices (59) are not shown.}
+\end{table*}

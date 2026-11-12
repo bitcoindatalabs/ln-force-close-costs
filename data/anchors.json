@@ -1,0 +1,372 @@
+{
+ "fate": [
+  {
+   "y": 2021,
+   "listed": false,
+   "anchors": 600,
+   "owner_bump": 41,
+   "owner_cleanup": 452,
+   "third_fast": 0,
+   "third_late": 107,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 15054.0,
+   "third_p90_delay": 38340.8,
+   "third_at_16": 0.0
+  },
+  {
+   "y": 2021,
+   "listed": true,
+   "anchors": 6074,
+   "owner_bump": 283,
+   "owner_cleanup": 5480,
+   "third_fast": 0,
+   "third_late": 311,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 8740.0,
+   "third_p90_delay": 16025.0,
+   "third_at_16": 0.0
+  },
+  {
+   "y": 2022,
+   "listed": false,
+   "anchors": 3115,
+   "owner_bump": 183,
+   "owner_cleanup": 2191,
+   "third_fast": 32,
+   "third_late": 709,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 73.0,
+   "third_p90_delay": 283.0,
+   "third_at_16": 0.03643724696356275
+  },
+  {
+   "y": 2022,
+   "listed": true,
+   "anchors": 59711,
+   "owner_bump": 3988,
+   "owner_cleanup": 44693,
+   "third_fast": 645,
+   "third_late": 10385,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 78.0,
+   "third_p90_delay": 251.0,
+   "third_at_16": 0.03590208522212149
+  },
+  {
+   "y": 2023,
+   "listed": false,
+   "anchors": 13693,
+   "owner_bump": 1293,
+   "owner_cleanup": 1157,
+   "third_fast": 20,
+   "third_late": 11223,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 256.0,
+   "third_p90_delay": 8572.0,
+   "third_at_16": 0.0007115538557324558
+  },
+  {
+   "y": 2023,
+   "listed": true,
+   "anchors": 56438,
+   "owner_bump": 13238,
+   "owner_cleanup": 9001,
+   "third_fast": 302,
+   "third_late": 33897,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 1708.0,
+   "third_p90_delay": 15081.0,
+   "third_at_16": 0.0035673557706365684
+  },
+  {
+   "y": 2024,
+   "listed": false,
+   "anchors": 33421,
+   "owner_bump": 1681,
+   "owner_cleanup": 1087,
+   "third_fast": 14017,
+   "third_late": 16636,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 22.0,
+   "third_p90_delay": 11113.0,
+   "third_at_16": 0.41069389619286856
+  },
+  {
+   "y": 2024,
+   "listed": true,
+   "anchors": 35210,
+   "owner_bump": 3505,
+   "owner_cleanup": 4242,
+   "third_fast": 4668,
+   "third_late": 22795,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 3308.0,
+   "third_p90_delay": 18009.599999999984,
+   "third_at_16": 0.14211848669118451
+  },
+  {
+   "y": 2025,
+   "listed": false,
+   "anchors": 72300,
+   "owner_bump": 259,
+   "owner_cleanup": 3217,
+   "third_fast": 52654,
+   "third_late": 16170,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 16.0,
+   "third_p90_delay": 21.0,
+   "third_at_16": 0.6761449494362431
+  },
+  {
+   "y": 2025,
+   "listed": true,
+   "anchors": 30363,
+   "owner_bump": 1482,
+   "owner_cleanup": 7234,
+   "third_fast": 19571,
+   "third_late": 2076,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 16.0,
+   "third_p90_delay": 17.0,
+   "third_at_16": 0.794059222987019
+  },
+  {
+   "y": 2026,
+   "listed": false,
+   "anchors": 56564,
+   "owner_bump": 401,
+   "owner_cleanup": 1015,
+   "third_fast": 48548,
+   "third_late": 6600,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 16.0,
+   "third_p90_delay": 18.0,
+   "third_at_16": 0.8021143105824328
+  },
+  {
+   "y": 2026,
+   "listed": true,
+   "anchors": 20013,
+   "owner_bump": 1452,
+   "owner_cleanup": 827,
+   "third_fast": 17097,
+   "third_late": 637,
+   "unspent": 0,
+   "other": 0,
+   "third_med_delay": 16.0,
+   "third_p90_delay": 17.0,
+   "third_at_16": 0.8815833991203338
+  }
+ ],
+ "bumps": [
+  {
+   "y": 2021,
+   "htlc": false,
+   "closes": 2983,
+   "bumped": 89,
+   "raised": 89
+  },
+  {
+   "y": 2021,
+   "htlc": true,
+   "closes": 446,
+   "bumped": 194,
+   "raised": 194
+  },
+  {
+   "y": 2022,
+   "htlc": false,
+   "closes": 26273,
+   "bumped": 848,
+   "raised": 846
+  },
+  {
+   "y": 2022,
+   "htlc": true,
+   "closes": 5713,
+   "bumped": 3137,
+   "raised": 3134
+  },
+  {
+   "y": 2023,
+   "htlc": false,
+   "closes": 22217,
+   "bumped": 7130,
+   "raised": 7122
+  },
+  {
+   "y": 2023,
+   "htlc": true,
+   "closes": 7684,
+   "bumped": 5978,
+   "raised": 5977
+  },
+  {
+   "y": 2024,
+   "htlc": false,
+   "closes": 15722,
+   "bumped": 1713,
+   "raised": 1713
+  },
+  {
+   "y": 2024,
+   "htlc": true,
+   "closes": 3373,
+   "bumped": 1784,
+   "raised": 1767
+  },
+  {
+   "y": 2025,
+   "htlc": false,
+   "closes": 13770,
+   "bumped": 551,
+   "raised": 197
+  },
+  {
+   "y": 2025,
+   "htlc": true,
+   "closes": 2705,
+   "bumped": 930,
+   "raised": 583
+  },
+  {
+   "y": 2026,
+   "htlc": false,
+   "closes": 9056,
+   "bumped": 634,
+   "raised": 204
+  },
+  {
+   "y": 2026,
+   "htlc": true,
+   "closes": 1612,
+   "bumped": 817,
+   "raised": 234
+  }
+ ],
+ "sweep_economics": [
+  {
+   "y": 2022,
+   "txs": 1341,
+   "anchors": 12158,
+   "per_tx": 9.066368381804624,
+   "share_only_anchors": 0.03131991051454139,
+   "med_fr": 1.0015948963317385,
+   "p90_fr": 1.0062111801242235,
+   "share_above_breakeven": 0.0,
+   "value_btc": 0.0401214,
+   "miners_btc": 0.00960369,
+   "sweepers_btc": 0.03051771,
+   "miners_share": 0.23936577487325963
+  },
+  {
+   "y": 2023,
+   "txs": 1117,
+   "anchors": 41676,
+   "per_tx": 37.31065353625783,
+   "share_only_anchors": 0.6454789615040286,
+   "med_fr": 3.437335670464505,
+   "p90_fr": 6.25,
+   "share_above_breakeven": 0.0017905102954341987,
+   "value_btc": 0.1375308,
+   "miners_btc": 0.0897679,
+   "sweepers_btc": 0.0477629,
+   "miners_share": 0.6527112472260759
+  },
+  {
+   "y": 2024,
+   "txs": 3021,
+   "anchors": 65507,
+   "per_tx": 21.683879510095995,
+   "share_only_anchors": 0.5412115193644489,
+   "med_fr": 4.898969072164949,
+   "p90_fr": 5.818941504178273,
+   "share_above_breakeven": 0.010261502813637868,
+   "value_btc": 0.2161731,
+   "miners_btc": 0.1817885,
+   "sweepers_btc": 0.0343846,
+   "miners_share": 0.8409395063493098
+  },
+  {
+   "y": 2025,
+   "txs": 9474,
+   "anchors": 90474,
+   "per_tx": 9.549715009499684,
+   "share_only_anchors": 0.12824572514249524,
+   "med_fr": 2.4976744186046513,
+   "p90_fr": 4.217252396166134,
+   "share_above_breakeven": 0.0007388642600802195,
+   "value_btc": 0.2985642,
+   "miners_btc": 0.24664895,
+   "sweepers_btc": 0.05191525,
+   "miners_share": 0.8261169624489474
+  },
+  {
+   "y": 2026,
+   "txs": 10390,
+   "anchors": 77132,
+   "per_tx": 7.423676612127045,
+   "share_only_anchors": 0.13387872954764196,
+   "med_fr": 1.6614906832298137,
+   "p90_fr": 4.589209183673474,
+   "share_above_breakeven": 0.00038498556304138594,
+   "value_btc": 0.2545356,
+   "miners_btc": 0.22154699,
+   "sweepers_btc": 0.03298861,
+   "miners_share": 0.8703968717931795
+  }
+ ],
+ "taproot_anchors": {
+  "outputs": 23864,
+  "spent": 1706
+ },
+ "taproot_anchors_by_year": [
+  {
+   "y": 2023,
+   "anchors": 32,
+   "spent": 26,
+   "unspent_old": 6,
+   "btc": 0.0001056
+  },
+  {
+   "y": 2024,
+   "anchors": 495,
+   "spent": 299,
+   "unspent_old": 196,
+   "btc": 0.0016335
+  },
+  {
+   "y": 2025,
+   "anchors": 3160,
+   "spent": 1310,
+   "unspent_old": 1850,
+   "btc": 0.010428
+  },
+  {
+   "y": 2026,
+   "anchors": 20177,
+   "spent": 71,
+   "unspent_old": 16774,
+   "btc": 0.0665841
+  }
+ ],
+ "breakeven_sat_vb": 6.3768115942028984,
+ "totals": {
+  "sweep_txs": 25343,
+  "anchors_swept": 286947,
+  "value_btc": 0.9469251,
+  "miners_btc": 0.74935603,
+  "sweepers_btc": 0.19756907
+ }
+}

@@ -1,0 +1,69 @@
+\pdfoutput=1
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+
+\input{numbers}
+
+\newcommand{\PaperTitle}{What Does It Cost to Force-Close a Lightning Channel?}
+\newcommand{\PaperSubtitle}{Evidence from \NClosesTitle{} Channel Closes, 2018--2026}
+
+\hypersetup{pdftitle={\PaperTitle{} \PaperSubtitle}, pdfauthor={Saurabh Kumar}}
+
+\begin{document}
+
+\title{\PaperTitle\\
+{\LARGE \PaperSubtitle}}
+
+\author{
+\IEEEauthorblockN{Saurabh Kumar}
+\IEEEauthorblockA{Bitcoin Data Labs\\
+sorukumar@bitcoindatalabs.org}
+}
+
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Lightning Network, Bitcoin, payment channel networks, force close, transaction fees, anchor outputs, fee bumping,
+zero-fee commitments, HTLC, measurement
+\end{IEEEkeywords}
+
+\input{sections/introduction}
+\input{sections/background}
+\input{sections/data}
+\input{sections/methods}
+\input{sections/census}
+\input{sections/cost}
+\input{sections/anchors}
+\input{sections/fees}
+\input{sections/zerofee}
+\input{sections/discussion}
+
+\appendices
+\input{sections/appendix}
+
+\section*{Data and Code Availability}
+Code, the aggregate datasets behind every figure and table, and a script that recomputes every number quoted in the
+text are available at \url{https://github.com/bitcoindatalabs/ln-force-close-costs}. All stages truncate their
+inputs at the data cutoff, block \CutoffHeight{} (\CutoffDate). The released aggregates name no node, address or
+transaction. The underlying blocks are public; our channel list and the per-transaction tables are available from
+the author on request.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

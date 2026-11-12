@@ -1,0 +1,97 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Fee spikes do not break channels}
+A common view holds that fee spikes break Lightning channels: commitment fees signed in calm markets fall behind,
+peers disagree over \texttt{update\_fee}, and channels are forced closed in a wave. In confirmed force closes we see no
+such wave, for pre-anchor channels as little as for anchor channels. \NSpikesUp{} of the \NSpikes{} spikes did bring
+more force closes, the most in May~2023, but pooled they sit below ordinary weeks of the same years.
+Spikes still matter, but through what happens after a close: HTLC transactions confirm later, owners bump commitments,
+and sweepers wait. The caveat is that the chain records confirmation, not broadcast. A close broadcast in a spike at
+too low a fee may wait for a cheaper block, which would spread a wave of broadcasts over the following weeks; those
+weeks show no rise beyond placebo noise either.
+
+\paragraph{Where the anchor design worked, and where it did not}
+Anchor outputs were meant to let the broadcaster pay the fee the market asks at broadcast time. For commitments that
+is rarely needed: outside 2023, owners seldom bumped, and in 2026 most same-block owner children did not raise the fee
+rate at all. Where the design shows its value is in HTLC transactions. In fee spikes, anchor channels' HTLC timeouts
+were late far less often than pre-anchor ones, and late HTLCs are what costs a forwarding node money. Meanwhile the
+anchors themselves became third-party dust: owners leave them, sweepers collect them at the first block or wait for
+cheap blocks, and miners take most of their value. This is the behaviour LND's open issue on dangling anchors
+assumes~\cite{lnd8997}, measured, but only for P2WSH anchors. No third party sweeps simple-taproot anchors, and their
+owners rarely do: of the \TaprootAnchorsTwentySix{} created in 2026, \TaprootAnchorsSpentTwentySix{} were spent. Each
+taproot force close therefore leaves outputs in the UTXO set, which a zero-value pay-to-anchor output, spent together
+with its commitment, does not (\S\ref{sec:zerofee}).
+
+\paragraph{The migration}
+Zero-fee commitments change little in block space. Their gains are a simpler fee story, no 330-sat outputs to sweep,
+and relay rules that no longer depend on the removed carve-out. Their test is the one on which anchors improved on
+the old format: whether HTLC transactions confirm before their deadlines when fees spike. Our measurements are the
+baseline for it: at 50~sat/vB or more, \HtlcLateSpikeAnchor\% of anchor channels' HTLC timeouts confirmed more than
+\HtlcMarginTight{} blocks late. How fast these gains arrive depends on operators,
+not on the specification: a channel keeps its format until it closes. Outside one cluster of short-lived channels,
+pre-anchor commitments were \LegacyPctExClusterTwentySix\% of 2026's public force closes, in channels a median of
+\LegacyOldAgeYears~years old, years after anchors became available. Our second paper found that most Lightning
+operators upgrade within months of a release while a tail stays far behind~\cite{kumar2026upgradedynamics}, so the old
+formats are likely to stay on-chain for years. The same choice, between fixing a fee when a transaction is signed and paying it
+when it is broadcast, faces every protocol built on pre-signed transactions and timelocks, and there too what matters
+is whether the time-critical transactions confirm on time~\cite{riard2020timedilation}.
+
+\paragraph{What a force close costs}
+In fees, a force close is cheap and a channel's life costs a fraction of a percent of its capacity, and the open is a
+large part of that. The cost of a force close is a ratio, a multiple of a cooperative close in fees and block space,
+and a wait, days before the closer's own funds return; the wait outweighs the fees only in low-fee years. Its
+exposure, the HTLCs that must confirm before their deadlines while fees are high, has rarely become a loss: since
+\SplitResFromYear, forwarding nodes lost \SplitResForwarderPayments{} payments that way, each with the preimage already
+on-chain.
+
+\paragraph{What the chain can catch}
+Two 2026 events show what transactions alone can reveal. A week of revoked commitments matched a splicing bug that
+Core Lightning had fixed days before, and the only split resolutions in the order replacement cycling leaves were a
+test of that attack on mainnet. We found both without node logs, and the same tests can be run on new blocks as they
+arrive.
+
+\section{Limitations}
+\label{sec:limitations}
+\emph{Broadcaster.} The chain does not show which party broadcast a force close, so costs are per channel, both
+parties together.
+\emph{Invisible bumps.} Fee bumps that never confirmed, and replaced transactions, leave no trace on the chain; we
+have no mempool record.
+\emph{Private channels.} Private channels appear only when they force close, so their number and their force-close
+rate are unknown, and their cooperative closes are not in the closing bill. Before 2024, ``unlisted'' also includes
+public channels missing from our list.
+\emph{Open channels.} Channels whose nodes have left count as open until closed on-chain, which lowers the
+per-channel rate as they accumulate; cohort incidence is not affected.
+\emph{Penalties.} Only punished breaches are visible.
+\emph{Scope of the cost account.} Pre-anchor \texttt{to\_remote} spends are excluded by design, and third-party
+anchor sweeps are counted as value lost, not as fees the channel pays. The break-even rate counts the broadcaster's
+locked balance only, not pending HTLC amounts. Simple taproot channels' spends are not
+classified, so their delays, HTLCs and bumps are missing from \S\ref{sec:cost}; they were \UnlTaprootPctTwentySix\% of
+2026's unlisted force closes.
+\emph{Fee regimes.} Every result depends on the fee regime, which is why the window covers all of Lightning's history.
+Anchor channels appear in our data from 2021, so anchor results start then.
+\emph{Lifecycle.} Opens are costed under an attribution rule; dual-funded opens are not identified (which does not
+change a per-channel cost), and only completed lives enter, so short-lived channels weigh more.
+\emph{Client labels} come from our first paper, inherit its accuracy and start in May~2023.
+\emph{Association.} The fee-spike test is a within-year association; it rules out a large same-week effect, not every
+causal path.
+
+\section{Ethics}
+\label{sec:ethics}
+All inputs are public blocks and public gossip. We report aggregates only: no list, ranking or label of nodes, sweeping
+operators, addresses or transactions, in the paper or in the released data. In particular we do not identify the
+dominant anchor sweeper, the nodes of the first zero-fee commitment closes, the operator of the replacement-cycling
+test or the channels of the breach wave.
+The paper reports no new vulnerability: replacement cycling was disclosed in 2023~\cite{riard2023replacement}, and the
+splicing bug was fixed before the wave~\cite{cln26068}.
+
+\section{Conclusion}
+\label{sec:conclusion}
+Fee spikes do not bring waves of Lightning force closes, for channels whose fee is fixed at signing or for those that
+can bump it.
+What a force close costs is a multiple of a cooperative close in fees and days of locked funds, and the wait outweighs
+the fees only in low-fee years. When fees are high, pending payments are exposed, yet forwarders lost few of them, each
+with the preimage already on-chain. The anchor design reduced that exposure for HTLCs, while its P2WSH anchors became
+dust that third parties sweep and miners collect, and its taproot anchors stay in the UTXO set. Zero-fee commitments
+will save little block space; the measure of the migration is whether payments still resolve before their deadlines
+when the next spike comes.

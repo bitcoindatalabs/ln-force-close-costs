@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{What a public force close costs, against a cooperative close, 2019--2026 (medians, sat unless stated).}
+\label{tab:costs}
+\footnotesize
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Year & Force closes & Commit. & Total & p90 & Coop. & Ratio & vB & Coop.\ vB & >1\% cap. & Days \\
+\midrule
+2019 & 30{,}001 & 4{,}900 & 7{,}460 & 24{,}802 & 3{,}485 & 2.1 & 270 & 138 & 54.9 & 1.0 \\
+2020 & 17{,}813 & 9{,}051 & 14{,}318 & 36{,}545 & 3{,}994 & 3.6 & 271 & 168 & 63.1 & 1.0 \\
+2021 & 27{,}393 & 2{,}583 & 3{,}984 & 31{,}397 & 697 & 5.7 & 302 & 168 & 41.0 & 1.0 \\
+2022 & 57{,}896 & 2{,}021 & 3{,}342 & 7{,}920 & 551 & 6.1 & 521 & 169 & 16.1 & 1.7 \\
+2023 & 49{,}998 & 2{,}872 & 7{,}346 & 45{,}588 & 2{,}005 & 3.7 & 595 & 192 & 32.1 & 2.1 \\
+2024 & 28{,}888 & 3{,}012 & 6{,}332 & 36{,}635 & 2{,}124 & 3.0 & 581 & 192 & 29.6 & 2.0 \\
+2025 & 21{,}518 & 730 & 1{,}292 & 3{,}912 & 262 & 4.9 & 598 & 192 & 11.7 & 1.7 \\
+2026\textsuperscript{a} & 14{,}435 & 597 & 925 & 2{,}363 & 197 & 4.7 & 585 & 192 & 7.5 & 2.5 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize \textsuperscript{a}Closes to 4 October 2026, so that outputs had four weeks to be spent. Total: every fee the force close requires (commitment, fee bump, HTLC resolution, sweeps, anchor cleanup); batched spends split per input. Ratio: median total over the median cooperative close fee. vB: block space, the same way. $>$1\% cap.: share of force closes whose fees exceed 1\% of channel capacity. Days: median wait before the broadcaster's own balance can be swept.}
+\end{table*}

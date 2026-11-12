@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{What anchor outputs are used for. Left: anchors by the year of their force close. Right: third-party sweep transactions by the year they confirmed.}
+\label{tab:anchors}
+\footnotesize
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Year & Anchors & Owner \% & Third \% & Unspent \% & Bumped \% & Delay & Sweep txs & Per tx & sat/vB & Miners \% \\
+\midrule
+2021 & 6{,}674 & 93.7 & 6.3 & 0.0 & 8.3 & 15{,}054 & -- & -- & -- & -- \\
+2022 & 62{,}826 & 81.3 & 18.7 & 0.0 & 12.5 & 78 & 1{,}341 & 9.1 & 1.00 & 23.9 \\
+2023 & 70{,}131 & 35.2 & 64.8 & 0.0 & 43.8 & 1{,}708 & 1{,}117 & 37.3 & 3.44 & 65.3 \\
+2024 & 68{,}631 & 15.3 & 84.7 & 0.0 & 18.3 & 3{,}308 & 3{,}021 & 21.7 & 4.90 & 84.1 \\
+2025 & 102{,}663 & 11.9 & 88.1 & 0.0 & 9.0 & 16 & 9{,}474 & 9.5 & 2.50 & 82.6 \\
+2026\textsuperscript{a} & 76{,}577 & 4.8 & 95.2 & 0.0 & 13.6 & 16 & 10{,}390 & 7.4 & 1.66 & 87.0 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize \textsuperscript{a}Closes to 4 October 2026. Anchors: P2WSH anchors of all force closes, public or not. Bumped: share of public anchor force closes with an owner child in the commitment's block. Delay: median blocks from the close to a third-party sweep. Sweep txs: transactions spending anchors with an empty signature (chain-wide). sat/vB: their median fee rate. Miners: share of the anchors' value paid as fees. Break-even fee rate: 6.38 sat/vB.}
+\end{table*}

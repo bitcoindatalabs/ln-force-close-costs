@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Force share of public closes by the client pair at the two ends (closes from 8 May 2023).}
+\label{tab:client_pairs}
+\footnotesize
+\begin{tabular}{lrrr}
+\toprule
+Client pair & Closes & Force & Force \% \\
+\midrule
+LND--LND & 169{,}435 & 47{,}905 & 28.3 \\
+CLN--LND & 20{,}611 & 7{,}149 & 34.7 \\
+LDK--LND & 17{,}749 & 6{,}603 & 37.2 \\
+LDK--LDK & 13{,}415 & 204 & 1.5 \\
+Eclair--LND & 11{,}474 & 3{,}335 & 29.1 \\
+CLN--CLN & 1{,}832 & 740 & 40.4 \\
+CLN--Eclair & 927 & 291 & 31.4 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Clients from paper 01's labels on the day of the close (high or medium confidence). The chain does not show which side broadcast a force close, so a close is attributed to the pair.}
+\end{table}

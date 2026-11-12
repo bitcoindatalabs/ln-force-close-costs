@@ -1,0 +1,17 @@
+Bitcoin's Lightning payment network returns the funds of a channel that cannot close cooperatively through
+pre-signed transactions whose fees and delays fall on its operators. That fee design is being replaced: Bitcoin
+Core 31.0 removed the mempool rule anchor channels relied on, and the Lightning specification adopted zero-fee
+commitments in May~2026. What the old design costs has never been measured across fee regimes.
+We trace every public channel close and every force close on-chain from January~2018 to October~2026,
+\NClosesAll{} closes, and follow each output to its spend. A separate chain index confirms all \ValLakeCompared{}
+public closes we could compare.
+Fee spikes did not bring a wave of force closes. Force closes in a spike week and the next were \PlEvAllNow{}
+times the four weeks before, against \PlEvAllNowMed{} after ordinary weeks of the same years.
+A force close costs \CostRatioMin--\CostRatioMax{} times a cooperative close in fees and locks the closer's balance
+for days, which outweighs the fees only in low-fee years. When fees are high, pending payments are exposed: in 2023,
+\HtlcLateTwentyThree\% of HTLC timeouts confirmed more than \HtlcMarginTight{} blocks after expiry. Yet since
+\SplitResFromYear, forwarding nodes lost only \SplitResForwarderPayments{} payments, each with the preimage already
+on-chain. Anchor outputs cut late timeouts in fee spikes (\HtlcLateSpikeAnchor\% against
+\HtlcLateSpikeLegacy\%), yet owners rarely bump commitments with them, and miners take most of what third parties
+sweep. Zero-fee commitments would save only \CfSavingPct\% of the anchor mechanism's block space; they should be
+judged by how promptly payments resolve when fees spike.

@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "Code and data for: What Does It Cost to Force-Close a Lightning Channel? Evidence from 974,000 Channel Closes, 2018-2026"
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Saurabh
+    affiliation: Bitcoin Data Labs
+repository-code: "https://github.com/bitcoindatalabs/ln-force-close-costs"
+url: "https://bitcoindatalabs.org/research.html#ln-force-close-costs"
+license: MIT
+version: v1.0-arxiv
+date-released: 2026-11-11
+keywords:
+  - Lightning Network
+  - Bitcoin
+  - payment channel networks
+  - force close
+  - transaction fees
+  - anchor outputs
+  - fee bumping
+  - zero-fee commitments
+  - HTLC
+  - replacement cycling
+  - measurement
+preferred-citation:
+  type: article
+  title: "What Does It Cost to Force-Close a Lightning Channel? Evidence from 974,000 Channel Closes, 2018-2026"
+  authors:
+    - family-names: Kumar
+      given-names: Saurabh
+      affiliation: Bitcoin Data Labs
+  journal: "arXiv preprint"
+  year: 2026
+  month: 11
+  url: "https://github.com/bitcoindatalabs/ln-force-close-costs"

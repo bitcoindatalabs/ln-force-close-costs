@@ -1,0 +1,1400 @@
+{
+ "by_year": [
+  {
+   "y": 2018,
+   "n": 336,
+   "med_party_fee": 2840.9285714285716,
+   "p90_party_fee": 9220.0,
+   "q25_party_fee": 1394.59375,
+   "q75_party_fee": 4798.5,
+   "mean_party_fee": 3969.2252066798937,
+   "total_party_btc": 0.013336596694444444,
+   "med_commitment": 1826.0,
+   "med_vb": 243.0,
+   "share_over_1pct": 0.5267857142857143,
+   "med_to_local_days": 1.0138888888888888,
+   "p90_to_local_days": 1.4027777777777777,
+   "share_htlc": 0.008928571428571428,
+   "btc_days_locked": 4.032427554513889,
+   "anchor_value_lost_btc": 0.0,
+   "sum_commitment": 917142,
+   "sum_bump": 0.0,
+   "sum_htlc": 21706.0,
+   "sum_sweeps": 394811.6694444444,
+   "sum_anchor_cleanup": 0.0,
+   "mutual_n": 22,
+   "fee_med": 1204.0,
+   "fee_mean": 1774.3636363636363,
+   "fee_q25": 580.0,
+   "fee_q75": 3037.75,
+   "vb_med": 138.0,
+   "fee_total": 39036.0,
+   "ratio_med": 2.3595752254390128,
+   "ratio_vb": 1.7608695652173914,
+   "coverage": "registry_limited"
+  },
+  {
+   "y": 2019,
+   "n": 30001,
+   "med_party_fee": 7460.0,
+   "p90_party_fee": 24802.0,
+   "q25_party_fee": 4170.0,
+   "q75_party_fee": 14958.75,
+   "mean_party_fee": 11187.876397061083,
+   "total_party_btc": 3.3564747978822957,
+   "med_commitment": 4900.0,
+   "med_vb": 269.75,
+   "share_over_1pct": 0.5491150294990167,
+   "med_to_local_days": 1.0208333333333333,
+   "p90_to_local_days": 8.347222222222221,
+   "share_htlc": 0.031665611146295125,
+   "btc_days_locked": 3395.429444084791,
+   "anchor_value_lost_btc": 0.0,
+   "sum_commitment": 238724145,
+   "sum_bump": 0.0,
+   "sum_htlc": 8136672.615384615,
+   "sum_sweeps": 88786662.17284498,
+   "sum_anchor_cleanup": 0.0,
+   "mutual_n": 30404,
+   "fee_med": 3485.0,
+   "fee_mean": 5728.040751216945,
+   "fee_q25": 1160.75,
+   "fee_q75": 8791.0,
+   "vb_med": 138.0,
+   "fee_total": 174155351.0,
+   "ratio_med": 2.140602582496413,
+   "ratio_vb": 1.9547101449275361,
+   "coverage": "ramping_january"
+  },
+  {
+   "y": 2020,
+   "n": 17813,
+   "med_party_fee": 14318.0,
+   "p90_party_fee": 36545.00000000001,
+   "q25_party_fee": 5414.0,
+   "q75_party_fee": 25152.5,
+   "mean_party_fee": 18542.625600926483,
+   "total_party_btc": 3.3029978982930346,
+   "med_commitment": 9051.0,
+   "med_vb": 271.0,
+   "share_over_1pct": 0.6310559703587267,
+   "med_to_local_days": 1.0208333333333333,
+   "p90_to_local_days": 9.1875,
+   "share_htlc": 0.06512097906023691,
+   "btc_days_locked": 2228.6787224798613,
+   "anchor_value_lost_btc": 0.0,
+   "sum_commitment": 211614575,
+   "sum_bump": 0.0,
+   "sum_htlc": 20648128.3,
+   "sum_sweeps": 98037086.52930345,
+   "sum_anchor_cleanup": 0.0,
+   "mutual_n": 28785,
+   "fee_med": 3994.0,
+   "fee_mean": 7349.1735626194195,
+   "fee_q25": 1567.0,
+   "fee_q75": 11053.0,
+   "vb_med": 168.0,
+   "fee_total": 211545961.0,
+   "ratio_med": 3.584877315973961,
+   "ratio_vb": 1.6130952380952381,
+   "coverage": "full"
+  },
+  {
+   "y": 2021,
+   "n": 27393,
+   "med_party_fee": 3984.0,
+   "p90_party_fee": 31397.0,
+   "q25_party_fee": 1805.0,
+   "q75_party_fee": 18320.0,
+   "mean_party_fee": 11556.579391026844,
+   "total_party_btc": 3.1656937925839834,
+   "med_commitment": 2583.0,
+   "med_vb": 302.0,
+   "share_over_1pct": 0.41021428832183404,
+   "med_to_local_days": 1.0208333333333333,
+   "p90_to_local_days": 8.354166666666666,
+   "share_htlc": 0.10393166137334356,
+   "btc_days_locked": 5419.704153247431,
+   "anchor_value_lost_btc": 0.0010263,
+   "sum_commitment": 207496998,
+   "sum_bump": 1671888.0,
+   "sum_htlc": 18161330.34761905,
+   "sum_sweeps": 88731832.33948268,
+   "sum_anchor_cleanup": 507330.57129664166,
+   "mutual_n": 64048,
+   "fee_med": 697.0,
+   "fee_mean": 3414.5015769422935,
+   "fee_q25": 355.0,
+   "fee_q75": 2914.0,
+   "vb_med": 168.0,
+   "fee_total": 218691997.0,
+   "ratio_med": 5.715925394548063,
+   "ratio_vb": 1.7976190476190477,
+   "coverage": "full"
+  },
+  {
+   "y": 2022,
+   "n": 57896,
+   "med_party_fee": 3342.3999999999996,
+   "p90_party_fee": 7920.5,
+   "q25_party_fee": 1914.0,
+   "q75_party_fee": 4985.0,
+   "mean_party_fee": 4327.455135412888,
+   "total_party_btc": 2.5054234251986456,
+   "med_commitment": 2021.0,
+   "med_vb": 521.0,
+   "share_over_1pct": 0.16111648473124224,
+   "med_to_local_days": 1.6666666666666667,
+   "p90_to_local_days": 8.970833333333353,
+   "share_htlc": 0.17201533784717424,
+   "btc_days_locked": 14951.312449903193,
+   "anchor_value_lost_btc": 0.036399,
+   "sum_commitment": 131937017,
+   "sum_bump": 22718144.0,
+   "sum_htlc": 22579490.490152575,
+   "sum_sweeps": 68835484.0231622,
+   "sum_anchor_cleanup": 4472207.006549797,
+   "mutual_n": 92645,
+   "fee_med": 551.0,
+   "fee_mean": 886.3931998488855,
+   "fee_q25": 344.0,
+   "fee_q75": 1065.0,
+   "vb_med": 169.0,
+   "fee_total": 82119898.0,
+   "ratio_med": 6.06606170598911,
+   "ratio_vb": 3.0828402366863905,
+   "coverage": "full"
+  },
+  {
+   "y": 2023,
+   "n": 49998,
+   "med_party_fee": 7345.700000000001,
+   "p90_party_fee": 45587.700000000026,
+   "q25_party_fee": 4220.0,
+   "q75_party_fee": 18328.6,
+   "mean_party_fee": 23936.188006748158,
+   "total_party_btc": 11.967615279613943,
+   "med_commitment": 2872.0,
+   "med_vb": 595.250641025641,
+   "share_over_1pct": 0.32095283811352454,
+   "med_to_local_days": 2.0833333333333335,
+   "p90_to_local_days": 14.0,
+   "share_htlc": 0.21158846353854155,
+   "btc_days_locked": 15201.484165903681,
+   "anchor_value_lost_btc": 0.1128567,
+   "sum_commitment": 284754064,
+   "sum_bump": 410015824.0,
+   "sum_htlc": 170028759.7191131,
+   "sum_sweeps": 327479542.2502215,
+   "sum_anchor_cleanup": 4483337.992059742,
+   "mutual_n": 62481,
+   "fee_med": 2005.0,
+   "fee_mean": 3840.120500632192,
+   "fee_q25": 1085.0,
+   "fee_q75": 3449.0,
+   "vb_med": 192.0,
+   "fee_total": 239934569.0,
+   "ratio_med": 3.663690773067332,
+   "ratio_vb": 3.10026375534188,
+   "coverage": "full"
+  },
+  {
+   "y": 2024,
+   "n": 28888,
+   "med_party_fee": 6332.5,
+   "p90_party_fee": 36635.499999999956,
+   "q25_party_fee": 3392.1875,
+   "q75_party_fee": 13999.25,
+   "mean_party_fee": 20618.629370832772,
+   "total_party_btc": 5.956309652646171,
+   "med_commitment": 3012.0,
+   "med_vb": 580.7577936333698,
+   "share_over_1pct": 0.2955552478537801,
+   "med_to_local_days": 1.9861111111111112,
+   "p90_to_local_days": 21.73888888888895,
+   "share_htlc": 0.1569163666574356,
+   "btc_days_locked": 11649.754943067013,
+   "anchor_value_lost_btc": 0.0906279,
+   "sum_commitment": 233148686,
+   "sum_bump": 145398497.0,
+   "sum_htlc": 67331076.96781597,
+   "sum_sweeps": 144548000.11346662,
+   "sum_anchor_cleanup": 5204705.183334459,
+   "mutual_n": 50874,
+   "fee_med": 2124.0,
+   "fee_mean": 3686.4276447694306,
+   "fee_q25": 966.0,
+   "fee_q75": 4115.75,
+   "vb_med": 192.0,
+   "fee_total": 187543320.0,
+   "ratio_med": 2.9814030131826743,
+   "ratio_vb": 3.024780175173801,
+   "coverage": "full"
+  },
+  {
+   "y": 2025,
+   "n": 21518,
+   "med_party_fee": 1291.5,
+   "p90_party_fee": 3911.874999999999,
+   "q25_party_fee": 877.0,
+   "q75_party_fee": 2177.578947368421,
+   "mean_party_fee": 2962.407050311194,
+   "total_party_btc": 0.6374507490859627,
+   "med_commitment": 730.0,
+   "med_vb": 598.355,
+   "share_over_1pct": 0.11650711032623849,
+   "med_to_local_days": 1.6666666666666667,
+   "p90_to_local_days": 14.020833333333334,
+   "share_htlc": 0.1344455804442792,
+   "btc_days_locked": 8477.052577998264,
+   "anchor_value_lost_btc": 0.0714351,
+   "sum_commitment": 31119877,
+   "sum_bump": 5083509.0,
+   "sum_htlc": 14158765.102147391,
+   "sum_sweeps": 11325132.888689568,
+   "sum_anchor_cleanup": 2057790.917759312,
+   "mutual_n": 58137,
+   "fee_med": 262.0,
+   "fee_mean": 476.8669866006158,
+   "fee_q25": 196.0,
+   "fee_q75": 459.0,
+   "vb_med": 192.0,
+   "fee_total": 27723616.0,
+   "ratio_med": 4.929389312977099,
+   "ratio_vb": 3.116432291666667,
+   "coverage": "full"
+  },
+  {
+   "y": 2026,
+   "n": 14435,
+   "med_party_fee": 925.4444444444445,
+   "p90_party_fee": 2362.8800000000006,
+   "q25_party_fee": 649.0,
+   "q75_party_fee": 1347.0,
+   "mean_party_fee": 1578.280319020448,
+   "total_party_btc": 0.22782476405060165,
+   "med_commitment": 597.0,
+   "med_vb": 585.4583673469388,
+   "share_over_1pct": 0.07509525458953932,
+   "med_to_local_days": 2.5069444444444446,
+   "p90_to_local_days": 15.527777777777779,
+   "share_htlc": 0.12116383789400761,
+   "btc_days_locked": 6712.349961919793,
+   "anchor_value_lost_btc": 0.0585222,
+   "sum_commitment": 12410223,
+   "sum_bump": 2070459.0,
+   "sum_htlc": 1795455.3047285941,
+   "sum_sweeps": 6310173.644037658,
+   "sum_anchor_cleanup": 196165.4562939125,
+   "mutual_n": 57179,
+   "fee_med": 197.0,
+   "fee_mean": 366.1067874569335,
+   "fee_q25": 196.0,
+   "fee_q75": 315.0,
+   "vb_med": 192.0,
+   "fee_total": 20933620.0,
+   "ratio_med": 4.697687535250987,
+   "ratio_vb": 3.0492623299319725,
+   "coverage": "full"
+  }
+ ],
+ "public_from_year": 2019,
+ "by_format": [
+  {
+   "y": 2018,
+   "fmt": "legacy",
+   "n": 336,
+   "med_party_fee": 2840.9285714285716,
+   "med_commitment": 1826.0,
+   "med_vb": 243.0,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2019,
+   "fmt": "legacy",
+   "n": 30001,
+   "med_party_fee": 7460.0,
+   "med_commitment": 4900.0,
+   "med_vb": 269.75,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2020,
+   "fmt": "legacy",
+   "n": 17813,
+   "med_party_fee": 14318.0,
+   "med_commitment": 9051.0,
+   "med_vb": 271.0,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2021,
+   "fmt": "anchor",
+   "n": 3429,
+   "med_party_fee": 3311.3571428571427,
+   "med_commitment": 2086.0,
+   "med_vb": 651.75,
+   "share_bumped": 0.08253135024788569
+  },
+  {
+   "y": 2021,
+   "fmt": "legacy",
+   "n": 23964,
+   "med_party_fee": 4647.0,
+   "med_commitment": 2906.0,
+   "med_vb": 301.0,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2022,
+   "fmt": "anchor",
+   "n": 31986,
+   "med_party_fee": 4095.6666666666665,
+   "med_commitment": 2699.0,
+   "med_vb": 670.5,
+   "share_bumped": 0.12458575626836742
+  },
+  {
+   "y": 2022,
+   "fmt": "legacy",
+   "n": 25910,
+   "med_party_fee": 2086.0,
+   "med_commitment": 1304.0,
+   "med_vb": 302.0,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2023,
+   "fmt": "anchor",
+   "n": 29901,
+   "med_party_fee": 9151.0,
+   "med_commitment": 2811.0,
+   "med_vb": 694.5,
+   "share_bumped": 0.43837998729139493
+  },
+  {
+   "y": 2023,
+   "fmt": "legacy",
+   "n": 20097,
+   "med_party_fee": 5089.0,
+   "med_commitment": 3078.0,
+   "med_vb": 301.0,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2024,
+   "fmt": "anchor",
+   "n": 19095,
+   "med_party_fee": 6601.0,
+   "med_commitment": 2823.0,
+   "med_vb": 620.2727272727273,
+   "share_bumped": 0.18313694684472376
+  },
+  {
+   "y": 2024,
+   "fmt": "legacy",
+   "n": 9793,
+   "med_party_fee": 5766.96,
+   "med_commitment": 3816.0,
+   "med_vb": 301.0,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2025,
+   "fmt": "anchor",
+   "n": 16475,
+   "med_party_fee": 1397.0,
+   "med_commitment": 719.0,
+   "med_vb": 626.3571428571429,
+   "share_bumped": 0.0898937784522003
+  },
+  {
+   "y": 2025,
+   "fmt": "legacy",
+   "n": 5043,
+   "med_party_fee": 1000.0,
+   "med_commitment": 742.0,
+   "med_vb": 283.0,
+   "share_bumped": 0.0
+  },
+  {
+   "y": 2026,
+   "fmt": "anchor",
+   "n": 10668,
+   "med_party_fee": 871.3964912280702,
+   "med_commitment": 488.0,
+   "med_vb": 622.0,
+   "share_bumped": 0.13601424821897262
+  },
+  {
+   "y": 2026,
+   "fmt": "legacy",
+   "n": 3765,
+   "med_party_fee": 938.0,
+   "med_commitment": 727.0,
+   "med_vb": 264.66666666666663,
+   "share_bumped": 0.0
+  }
+ ],
+ "penalties": [
+  {
+   "y": 2018,
+   "txs": 149,
+   "inputs": 150,
+   "btc": 0.70350061,
+   "any_listed": false
+  },
+  {
+   "y": 2019,
+   "txs": 115,
+   "inputs": 123,
+   "btc": 1.62958084,
+   "any_listed": true
+  },
+  {
+   "y": 2020,
+   "txs": 9,
+   "inputs": 9,
+   "btc": 0.08094518,
+   "any_listed": true
+  },
+  {
+   "y": 2021,
+   "txs": 26,
+   "inputs": 26,
+   "btc": 0.54436469,
+   "any_listed": true
+  },
+  {
+   "y": 2022,
+   "txs": 32,
+   "inputs": 35,
+   "btc": 1.0393098,
+   "any_listed": true
+  },
+  {
+   "y": 2023,
+   "txs": 149,
+   "inputs": 157,
+   "btc": 1.28626661,
+   "any_listed": true
+  },
+  {
+   "y": 2024,
+   "txs": 116,
+   "inputs": 136,
+   "btc": 1.32910934,
+   "any_listed": true
+  },
+  {
+   "y": 2025,
+   "txs": 33,
+   "inputs": 33,
+   "btc": 1.44786721,
+   "any_listed": true
+  },
+  {
+   "y": 2026,
+   "txs": 321,
+   "inputs": 324,
+   "btc": 3.37460866,
+   "any_listed": true
+  }
+ ],
+ "penalties_monthly": [
+  {
+   "m": "2018-01",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00515144
+  },
+  {
+   "m": "2018-02",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.0046771
+  },
+  {
+   "m": "2018-03",
+   "listed": false,
+   "txs": 37,
+   "btc": 0.0567269
+  },
+  {
+   "m": "2018-04",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.00094854
+  },
+  {
+   "m": "2018-05",
+   "listed": false,
+   "txs": 4,
+   "btc": 0.03685605
+  },
+  {
+   "m": "2018-06",
+   "listed": false,
+   "txs": 9,
+   "btc": 0.02707496
+  },
+  {
+   "m": "2018-07",
+   "listed": false,
+   "txs": 11,
+   "btc": 0.03571292
+  },
+  {
+   "m": "2018-08",
+   "listed": false,
+   "txs": 11,
+   "btc": 0.09141701
+  },
+  {
+   "m": "2018-09",
+   "listed": false,
+   "txs": 61,
+   "btc": 0.33498629
+  },
+  {
+   "m": "2018-10",
+   "listed": false,
+   "txs": 5,
+   "btc": 0.00641599
+  },
+  {
+   "m": "2018-11",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.08837567
+  },
+  {
+   "m": "2018-12",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.01515774
+  },
+  {
+   "m": "2019-01",
+   "listed": false,
+   "txs": 14,
+   "btc": 0.08917289
+  },
+  {
+   "m": "2019-01",
+   "listed": true,
+   "txs": 5,
+   "btc": 0.02487701
+  },
+  {
+   "m": "2019-02",
+   "listed": false,
+   "txs": 14,
+   "btc": 0.27818023
+  },
+  {
+   "m": "2019-02",
+   "listed": true,
+   "txs": 18,
+   "btc": 0.43950055
+  },
+  {
+   "m": "2019-03",
+   "listed": false,
+   "txs": 5,
+   "btc": 0.10141355
+  },
+  {
+   "m": "2019-03",
+   "listed": true,
+   "txs": 21,
+   "btc": 0.40408266
+  },
+  {
+   "m": "2019-04",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.00929988
+  },
+  {
+   "m": "2019-04",
+   "listed": true,
+   "txs": 4,
+   "btc": 0.01289774
+  },
+  {
+   "m": "2019-05",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.0023504
+  },
+  {
+   "m": "2019-06",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.00649269
+  },
+  {
+   "m": "2019-06",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.00993578
+  },
+  {
+   "m": "2019-07",
+   "listed": false,
+   "txs": 4,
+   "btc": 0.01583638
+  },
+  {
+   "m": "2019-07",
+   "listed": true,
+   "txs": 4,
+   "btc": 0.02203998
+  },
+  {
+   "m": "2019-08",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.0006
+  },
+  {
+   "m": "2019-09",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.00236645
+  },
+  {
+   "m": "2019-10",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.0830615
+  },
+  {
+   "m": "2019-11",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.0003323
+  },
+  {
+   "m": "2019-11",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.03861911
+  },
+  {
+   "m": "2019-12",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.0007363
+  },
+  {
+   "m": "2019-12",
+   "listed": true,
+   "txs": 9,
+   "btc": 0.08778544
+  },
+  {
+   "m": "2020-01",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00997845
+  },
+  {
+   "m": "2020-02",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.00408184
+  },
+  {
+   "m": "2020-03",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.04995
+  },
+  {
+   "m": "2020-03",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00133886
+  },
+  {
+   "m": "2020-04",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00026078
+  },
+  {
+   "m": "2020-06",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00997845
+  },
+  {
+   "m": "2020-09",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.0053568
+  },
+  {
+   "m": "2021-01",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.00120284
+  },
+  {
+   "m": "2021-02",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00475803
+  },
+  {
+   "m": "2021-05",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.0022475
+  },
+  {
+   "m": "2021-06",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.0203098
+  },
+  {
+   "m": "2021-07",
+   "listed": true,
+   "txs": 4,
+   "btc": 0.43500499
+  },
+  {
+   "m": "2021-09",
+   "listed": true,
+   "txs": 9,
+   "btc": 0.0585314
+  },
+  {
+   "m": "2021-10",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00964948
+  },
+  {
+   "m": "2021-11",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00066342
+  },
+  {
+   "m": "2021-11",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.01014341
+  },
+  {
+   "m": "2021-12",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00185382
+  },
+  {
+   "m": "2022-01",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.16626727
+  },
+  {
+   "m": "2022-02",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.16769457
+  },
+  {
+   "m": "2022-03",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00977666
+  },
+  {
+   "m": "2022-03",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.10343768
+  },
+  {
+   "m": "2022-04",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.12511842
+  },
+  {
+   "m": "2022-05",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00141911
+  },
+  {
+   "m": "2022-06",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.17109387
+  },
+  {
+   "m": "2022-08",
+   "listed": false,
+   "txs": 6,
+   "btc": 0.14054187
+  },
+  {
+   "m": "2022-09",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.05011137
+  },
+  {
+   "m": "2022-10",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.00997007
+  },
+  {
+   "m": "2022-10",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.01311374
+  },
+  {
+   "m": "2022-11",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00028506
+  },
+  {
+   "m": "2022-11",
+   "listed": true,
+   "txs": 5,
+   "btc": 0.06864577
+  },
+  {
+   "m": "2022-12",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.01183434
+  },
+  {
+   "m": "2023-01",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00096148
+  },
+  {
+   "m": "2023-02",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.00017422
+  },
+  {
+   "m": "2023-02",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.07705039
+  },
+  {
+   "m": "2023-03",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.00511692
+  },
+  {
+   "m": "2023-03",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.03764874
+  },
+  {
+   "m": "2023-04",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.15414329
+  },
+  {
+   "m": "2023-04",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.04509958
+  },
+  {
+   "m": "2023-06",
+   "listed": false,
+   "txs": 14,
+   "btc": 0.12363503
+  },
+  {
+   "m": "2023-06",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.02469217
+  },
+  {
+   "m": "2023-07",
+   "listed": false,
+   "txs": 23,
+   "btc": 0.04135819
+  },
+  {
+   "m": "2023-07",
+   "listed": true,
+   "txs": 9,
+   "btc": 0.19317967
+  },
+  {
+   "m": "2023-08",
+   "listed": false,
+   "txs": 17,
+   "btc": 0.02512435
+  },
+  {
+   "m": "2023-09",
+   "listed": false,
+   "txs": 12,
+   "btc": 0.15581872
+  },
+  {
+   "m": "2023-09",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.10190575
+  },
+  {
+   "m": "2023-10",
+   "listed": false,
+   "txs": 26,
+   "btc": 0.05586242
+  },
+  {
+   "m": "2023-11",
+   "listed": false,
+   "txs": 21,
+   "btc": 0.13953032
+  },
+  {
+   "m": "2023-11",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.02976993
+  },
+  {
+   "m": "2023-12",
+   "listed": false,
+   "txs": 9,
+   "btc": 0.07519544
+  },
+  {
+   "m": "2024-01",
+   "listed": false,
+   "txs": 6,
+   "btc": 0.00652251
+  },
+  {
+   "m": "2024-01",
+   "listed": true,
+   "txs": 14,
+   "btc": 0.34556476
+  },
+  {
+   "m": "2024-02",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.02543498
+  },
+  {
+   "m": "2024-02",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00315323
+  },
+  {
+   "m": "2024-03",
+   "listed": false,
+   "txs": 19,
+   "btc": 0.00986207
+  },
+  {
+   "m": "2024-03",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.0050544
+  },
+  {
+   "m": "2024-04",
+   "listed": false,
+   "txs": 5,
+   "btc": 0.00540269
+  },
+  {
+   "m": "2024-04",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.02968923
+  },
+  {
+   "m": "2024-05",
+   "listed": false,
+   "txs": 5,
+   "btc": 0.00406051
+  },
+  {
+   "m": "2024-06",
+   "listed": false,
+   "txs": 6,
+   "btc": 0.08898535
+  },
+  {
+   "m": "2024-06",
+   "listed": true,
+   "txs": 5,
+   "btc": 0.12511671
+  },
+  {
+   "m": "2024-07",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.0002888
+  },
+  {
+   "m": "2024-08",
+   "listed": false,
+   "txs": 4,
+   "btc": 0.00510457
+  },
+  {
+   "m": "2024-08",
+   "listed": true,
+   "txs": 1,
+   "btc": 1.832e-05
+  },
+  {
+   "m": "2024-09",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.00200384
+  },
+  {
+   "m": "2024-09",
+   "listed": true,
+   "txs": 25,
+   "btc": 0.15443779
+  },
+  {
+   "m": "2024-10",
+   "listed": false,
+   "txs": 3,
+   "btc": 0.00272069
+  },
+  {
+   "m": "2024-10",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00050437
+  },
+  {
+   "m": "2024-11",
+   "listed": false,
+   "txs": 5,
+   "btc": 0.01049991
+  },
+  {
+   "m": "2024-11",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.49991385
+  },
+  {
+   "m": "2024-12",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00477076
+  },
+  {
+   "m": "2025-01",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.01666076
+  },
+  {
+   "m": "2025-01",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.00354882
+  },
+  {
+   "m": "2025-03",
+   "listed": false,
+   "txs": 4,
+   "btc": 0.02387529
+  },
+  {
+   "m": "2025-03",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00065517
+  },
+  {
+   "m": "2025-04",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.001473
+  },
+  {
+   "m": "2025-04",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00386566
+  },
+  {
+   "m": "2025-07",
+   "listed": false,
+   "txs": 4,
+   "btc": 0.00481782
+  },
+  {
+   "m": "2025-07",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00018054
+  },
+  {
+   "m": "2025-08",
+   "listed": false,
+   "txs": 8,
+   "btc": 1.29497607
+  },
+  {
+   "m": "2025-08",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.09029794
+  },
+  {
+   "m": "2025-09",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.00539491
+  },
+  {
+   "m": "2025-10",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.00013995
+  },
+  {
+   "m": "2025-10",
+   "listed": true,
+   "txs": 3,
+   "btc": 0.0015719
+  },
+  {
+   "m": "2025-12",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.00040938
+  },
+  {
+   "m": "2026-01",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.00880578
+  },
+  {
+   "m": "2026-02",
+   "listed": false,
+   "txs": 1,
+   "btc": 0.09593309
+  },
+  {
+   "m": "2026-03",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00708773
+  },
+  {
+   "m": "2026-04",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.00424056
+  },
+  {
+   "m": "2026-05",
+   "listed": true,
+   "txs": 2,
+   "btc": 0.00306628
+  },
+  {
+   "m": "2026-06",
+   "listed": false,
+   "txs": 2,
+   "btc": 4.398e-05
+  },
+  {
+   "m": "2026-07",
+   "listed": true,
+   "txs": 1,
+   "btc": 0.01275751
+  },
+  {
+   "m": "2026-08",
+   "listed": false,
+   "txs": 2,
+   "btc": 0.00059594
+  },
+  {
+   "m": "2026-09",
+   "listed": false,
+   "txs": 87,
+   "btc": 0.95277142
+  },
+  {
+   "m": "2026-10",
+   "listed": false,
+   "txs": 221,
+   "btc": 2.28930637
+  }
+ ],
+ "penalty_wave_daily": [
+  {
+   "d": "2026-09-28",
+   "txs": 11,
+   "closes": 11,
+   "btc": 0.09352917,
+   "max_blocks_to_penalty": 113
+  },
+  {
+   "d": "2026-09-29",
+   "txs": 48,
+   "closes": 48,
+   "btc": 0.53604781,
+   "max_blocks_to_penalty": 116
+  },
+  {
+   "d": "2026-09-30",
+   "txs": 103,
+   "closes": 103,
+   "btc": 1.18932125,
+   "max_blocks_to_penalty": 120
+  },
+  {
+   "d": "2026-10-01",
+   "txs": 48,
+   "closes": 48,
+   "btc": 0.4738896,
+   "max_blocks_to_penalty": 116
+  },
+  {
+   "d": "2026-10-02",
+   "txs": 41,
+   "closes": 41,
+   "btc": 0.40732908,
+   "max_blocks_to_penalty": 110
+  },
+  {
+   "d": "2026-10-03",
+   "txs": 35,
+   "closes": 35,
+   "btc": 0.36087947,
+   "max_blocks_to_penalty": 86
+  },
+  {
+   "d": "2026-10-04",
+   "txs": 19,
+   "closes": 19,
+   "btc": 0.15065896,
+   "max_blocks_to_penalty": 23
+  },
+  {
+   "d": "2026-10-05",
+   "txs": 1,
+   "closes": 1,
+   "btc": 0.0003,
+   "max_blocks_to_penalty": 100
+  }
+ ],
+ "penalty_wave_format": [
+  {
+   "fmt": "anchor",
+   "closes": 306,
+   "funding_txs": 306
+  }
+ ],
+ "to_self_delay": [
+  {
+   "d": 144.0,
+   "k": 107791
+  },
+  {
+   "d": 240.0,
+   "k": 15953
+  },
+  {
+   "d": 600.0,
+   "k": 15374
+  },
+  {
+   "d": 2016.0,
+   "k": 13137
+  },
+  {
+   "d": 1201.0,
+   "k": 9942
+  },
+  {
+   "d": 2015.0,
+   "k": 9251
+  },
+  {
+   "d": 360.0,
+   "k": 7327
+  },
+  {
+   "d": 480.0,
+   "k": 5665
+  },
+  {
+   "d": 720.0,
+   "k": 4518
+  },
+  {
+   "d": 300.0,
+   "k": 3257
+  },
+  {
+   "d": 180.0,
+   "k": 2675
+  },
+  {
+   "d": 961.0,
+   "k": 1416
+  },
+  {
+   "d": 432.0,
+   "k": 1265
+  },
+  {
+   "d": 1802.0,
+   "k": 1152
+  },
+  {
+   "d": 1922.0,
+   "k": 963
+  }
+ ],
+ "n_closes": 247942,
+ "n_closes_incl_2018": 248278,
+ "censor_blocks": 4032,
+ "all_years": {
+  "med_party_fee": 4491.25,
+  "total_party_btc": 31.11979035935464,
+  "med_to_local_days": 1.6666666666666667,
+  "share_to_self_delay_144": 0.48768691324510804,
+  "share_to_self_delay_ge_2015": 0.10157222033706595,
+  "anchor_value_lost_btc": 0.3708672
+ }
+}
