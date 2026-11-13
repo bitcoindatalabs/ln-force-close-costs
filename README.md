@@ -2,7 +2,10 @@
 
 Saurabh Kumar, Bitcoin Data Labs
 
-**Paper:** arXiv link to follow on announcement · [Bitcoin Data Labs research](https://bitcoindatalabs.org/research.html).
+**Paper:** [arXiv:2611.16311](https://arxiv.org/abs/2611.16311) ([HTML](https://arxiv.org/html/2611.16311),
+[PDF](https://arxiv.org/pdf/2611.16311)) · DOI [10.48550/arXiv.2611.16311](https://doi.org/10.48550/arXiv.2611.16311)
+· [Bitcoin Data Labs research](https://bitcoindatalabs.org/research.html#ln-force-close-costs) ·
+[plain-language guide](https://bitcoindatalabs.github.io/deep-dives/analyses/2026-11-lightning-force-closes/)
 The third paper of a series, after
 [*Does Client Diversity Protect the Lightning Network?*](https://github.com/bitcoindatalabs/ln-client-diversity)
 (arXiv:2610.20952), whose client labels it uses, and

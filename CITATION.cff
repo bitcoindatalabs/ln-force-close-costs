@@ -30,7 +30,8 @@ preferred-citation:
     - family-names: Kumar
       given-names: Saurabh
       affiliation: Bitcoin Data Labs
-  journal: "arXiv preprint"
+  journal: "arXiv preprint arXiv:2611.16311"
   year: 2026
   month: 11
-  url: "https://github.com/bitcoindatalabs/ln-force-close-costs"
+  doi: 10.48550/arXiv.2611.16311
+  url: "https://arxiv.org/abs/2611.16311"
